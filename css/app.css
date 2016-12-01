@@ -1,32 +1,57 @@
-.header{
-    width: 100vw;
-    height: 100vh;
+body{
     background: #350515;
 }
-.row{
-    max-width: 100%;
-    padding-left:50px;
+.header {
+    width: 100vw;
+    height: 100vh;
 }
 .image {
     width: auto;
-    height: 90vh;
-}
-@-webkit-keyframes swinging{
-    0%{-webkit-transform: rotate(10deg);}
-    50%{-webkit-transform: rotate(-5deg)}
-    100%{-webkit-transform: rotate(10deg);}
+    height: 60vh;
 }
 
-@keyframes swinging{
-    0%{transform: rotate(10deg);}
-    50%{transform: rotate(-5deg)}
-    100%{transform: rotate(10deg);}
+@-webkit-keyframes swinging {
+    0% {
+        transform: rotate(3deg);
+    }
+    50% {
+        transform: rotate(-1.5deg)
+    }
+    100% {
+        transform: rotate(3deg);
+    }
 }
 
-.swing{
+@keyframes swinging {
+    0% {
+        transform: rotate(3deg);
+    }
+    50% {
+        transform: rotate(-1.5deg)
+    }
+    100% {
+        transform: rotate(3deg);
+    }
+}
+
+.swing {
     -webkit-transform-origin: 50% 0;
     transform-origin: 50% 0;
-    -webkit-animation: swinging 3.5s ease-in-out forwards infinite;
-    animation: swinging 3.5s ease-in-out forwards infinite;
+    -webkit-animation: swinging 2s ease-in-out forwards infinite;
+    animation: swinging 2s ease-in-out forwards infinite;
     transition-delay: 0.5s;
+}
+svg line {
+    stroke-width: 10;
+    stroke: #fff;
+    fill: none;
+    -webkit-transition: -webkit-transform .6s;
+    transition: transform .6s;
+}
+.meh{
+    background: #ddd;
+    margin-top: 10%;
+}
+.bottom{
+    margin-top: 3%;
 }
