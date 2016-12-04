@@ -4,61 +4,71 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundation for Sites</title>
+    <title>The Inner Goddess Academy</title>
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
     <script src="js/vendor/foundation.js"></script>
     <script src="js/vendor/jquery.js"></script>
-    <script src="js/raphael.min.js"></script>
-    <script src="js/lazylineprinter.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
 </head>
 <body>
-<div class="row" id="meh">
-    <div class="large-6 small-12 large-centered columns " id="hmm">
-        <div id="writing">
-            <svg width="380" height="100" viewBox="-116 347.9 378.5 98.1" id="theAcadmey">
-                <style type="text/css">
-                    .st0{font-family:'existenceLight';}
-                    .st1{font-size:36.9903px;}
-                    .st2{font-size:38.3582px;}
-                </style>
-                <text transform="matrix(1 0 0 1 -51.5674 381.8858)" id="the" class="st0 st1">The</text>
-                <text transform="matrix(1 0 0 1 92.2842 433.026)" id="academy" class="st0 st2">Academy</text>
-            </svg>
-            <svg width="380" height="200" id="box">
-                <line id="1" x1="370" y1="0" x2="130" y2="0"/>
-                <line id="2" x1="370" y1="0" x2="370" y2="93"/>
-                <line id="3" x1="10" y1="112" x2="10" y2="200"/>
-                <line id="4" x1="10" y1="200" x2="230" y2="200"/>
-                <animate xlink:href="#1" attributeName="x2" from="370" to="130" dur="5s"/>
-                <animate xlink:href="#2" attributeName="y2" from="0" to="93" dur="5s"/>
-                <animate xlink:href="#3" attributeName="y1" from="200" to="112" dur="5s"/>
-                <animate xlink:href="#4" attributeName="x2" from="10" to="230" dur="5s"/>
-            </svg>
-            <svg width="380" height="100" id="InnerGoddess">
-                <style>
-                    .sto {
-                        fill: none;
-                    }
-                </style>
-                <path id="XMLID_107_" class="sto" d="M11,21.6C10.6,18.8,25.7,2.1,41.9,2.1c12.1,0,16,9.9,16.3,11.9c2.6,18.3-32,52-46.7,52
+<div id="fullpage">
+    <div class="section">
+        <div class="row" id="meh">
+            <div class="large-12 small-12 large-centered columns " id="hmm">
+                <div id="writing">
+                    <svg viewBox="-116 350 380 100" preserveAspectRatio="xMidYMid meet" id="theAcadmey">
+                        <style type="text/css">
+                            .st0 {
+                                font-family: 'existenceLight';
+                            }
+
+                            .st1 {
+                                font-size: 36.9903px;
+                            }
+
+                            .st2 {
+                                font-size: 38.3582px;
+                            }
+                        </style>
+                        <text transform="matrix(1 0 0 1 -51.5674 381.8858)" id="the" class="st0 st1">The</text>
+                        <text transform="matrix(1 0 0 1 92.2842 433.026)" id="academy" class="st0 st2">Academy</text>
+                    </svg>
+                    <svg viewBox="0 0 380 200" preserveAspectRatio="xMidYMid meet" id="box">
+                        <line class="st" id="1" x1="370" y1="0" x2="130" y2="0"/>
+                        <line class="st" id="2" x1="370" y1="0" x2="370" y2="93"/>
+                        <line class="st" id="3" x1="10" y1="112" x2="10" y2="200"/>
+                        <line class="st" id="4" x1="10" y1="200" x2="230" y2="200"/>
+                        <animate xlink:href="#1" attributeName="x2" from="370" to="130" dur="5s"/>
+                        <animate xlink:href="#2" attributeName="y2" from="0" to="93" dur="5s"/>
+                        <animate xlink:href="#3" attributeName="y1" from="200" to="112" dur="5s"/>
+                        <animate xlink:href="#4" attributeName="x2" from="10" to="230" dur="5s"/>
+                    </svg>
+                    <svg viewbox="0 0 380 100" preserveAspectRatio="xMidYMid meet" id="InnerGoddess">
+                        <style>
+                            .sto {
+                                fill: none;
+                            }
+                        </style>
+                        <path id="XMLID_107_" class="sto" d="M11,21.6C10.6,18.8,25.7,2.1,41.9,2.1c12.1,0,16,9.9,16.3,11.9c2.6,18.3-32,52-46.7,52
 		C-3.1,66,0,55.2,0.8,55.2c0.8,0,0.5,6.4,3.5,6.4c19.6,0,48.2-41.3,46.7-51.7C49.5-0.9,16.5,21.4,16.5,25.8c0,0.7,0.3,0.9,0.3,1.4
 		C16.8,28.8,11.3,24.4,11,21.6z"/>
-                <path id="XMLID_109_" class="sto" d="M61.4,53.3c0-5,8.9-17,8.9-17c-2,0-19.1,20-19.1,22.8c0,4.4-4.1,0-4.1-4.7c0-4.9,11.9-17.3,11.9-23.3
+                        <path id="XMLID_109_" class="sto" d="M61.4,53.3c0-5,8.9-17,8.9-17c-2,0-19.1,20-19.1,22.8c0,4.4-4.1,0-4.1-4.7c0-4.9,11.9-17.3,11.9-23.3
 		c0-2.1,4.4,0.2,4.4,6.2c0,2.9-2,4.9-2,4.9s10.9-11.1,13-11.1c2.1,0,3.4,3.1,3.4,6s-14,20.9-11.3,20.9c3.6,0,12.4-10.3,17.7-18.3
 		c0.8-1.3,2.6-0.7,1.4,1.3c-1.3,1.9-14,20.1-19.9,20.1C63.2,60.9,61.4,57.8,61.4,53.3z"/>
-                <path id="XMLID_111_" class="sto" d="M90.1,53.3c0-5,8.9-17,8.9-17c-2,0-19.1,20-19.1,22.8c0,4.4-4.1,0-4.1-4.7c0-4.9,11.9-17.3,11.9-23.3
+                        <path id="XMLID_111_" class="sto" d="M90.1,53.3c0-5,8.9-17,8.9-17c-2,0-19.1,20-19.1,22.8c0,4.4-4.1,0-4.1-4.7c0-4.9,11.9-17.3,11.9-23.3
 		c0-2.1,4.4,0.2,4.4,6.2c0,2.9-2,4.9-2,4.9s10.9-11.1,13-11.1c2.1,0,3.4,3.1,3.4,6S92.3,57.8,95,57.8c3.6,0,12.4-10.3,17.7-18.3
 		c0.8-1.3,2.6-0.7,1.4,1.3c-1.3,1.9-14,20.1-19.9,20.1C91.8,60.9,90.1,57.8,90.1,53.3z"/>
-                <path id="XMLID_113_" class="sto" d="M135.3,41.2c-1.3,2-15.7,19.7-23.3,19.7c0,0-5.8-0.1-5.8-7.4c0-10.9,14.3-22.5,18.3-22.5
+                        <path id="XMLID_113_" class="sto" d="M135.3,41.2c-1.3,2-15.7,19.7-23.3,19.7c0,0-5.8-0.1-5.8-7.4c0-10.9,14.3-22.5,18.3-22.5
 		c1.6,0,4.2,1.1,4.2,6.8S116,53.3,112.8,53.3c0,0-2.2,4,0.9,4c4,0,14.8-9.4,20.1-17.3C134.7,38.6,136.5,39.3,135.3,41.2z M113.9,51
 		c8.2-4.8,12-12.6,10-12.6C121.8,38.4,113.9,51,113.9,51z"/>
-                <path id="XMLID_116_" class="sto" d="M160.7,41.1c-1.3,1.9-14.3,19.7-19.8,19.7c-4.6,0-5.6-3.9-5.6-7.1c0-3.4,5-9.6,7.5-15.2
+                        <path id="XMLID_116_" class="sto" d="M160.7,41.1c-1.3,1.9-14.3,19.7-19.8,19.7c-4.6,0-5.6-3.9-5.6-7.1c0-3.4,5-9.6,7.5-15.2
 		c-1.7,0.7-4.7,1.7-7.9,1.7c-1.7,0-4.7-1-4.7-7.6c0-9.4,7.1-16.1,11.3-16.1c2.2,0,4.1,1.4,4.1,3.9c0,4.9-8.3,16.1-8.3,16.1
 		s8-4.1,9.3-4.9c0.8-0.5,1.6-1.4,2.5-0.5c1,0.8,5.8,4.3,3.1,7.4c-0.1,0.1-0.2,0.3-0.4,0.4c-3.1,4.1-14.2,18.8-9.1,18.8v0.1
 		c1.8,0,11.3-10,16.6-17.9C160.2,38.6,162,39.2,160.7,41.1z M135.9,35.6c3.4-6.4,7.2-12.1,5.2-12.1s-6.3,5.9-6.3,8.8
 		C134.8,34.5,135.9,35.6,135.9,35.6z"/>
-                <path id="XMLID_119_" class="sto" d="M223.4,15.7c-1.5,6.3-10.9,11.6-18.5,14.5c-5.5,2.2-18.6,5-18.6,5c-3.2,4-7.1,9.4-8.2,13.7l-0.4,1
+                        <path id="XMLID_119_" class="sto" d="M223.4,15.7c-1.5,6.3-10.9,11.6-18.5,14.5c-5.5,2.2-18.6,5-18.6,5c-3.2,4-7.1,9.4-8.2,13.7l-0.4,1
 		c-4.2,15.7,22.4,7.9,27.2-2.6c0.3-0.7,0.5-1.3,0.7-1.9c0.1,0,0.1,0,0.1-0.1c1.1-3.9,1.9-7.2,1.6-9.4c-0.4-1.4-1.7-1.9,0.2-2.4
 		c1.9-0.5,4.6,1.3,5.6,6.7c1.3,7.3-17.6,52.4-36.5,57.5c-2.9,0.8-6.4-0.7-7.2-5.5c-0.9-4.9,25.7-24.9,25.7-24.9
 		c1.3-1.9,3.8-6.6,6.2-11.9c-12.4,8.6-34.2,8.1-29.2-10.7c0.7-2.7,2.3-5.8,4.6-9.1l-0.9,0.1c-5.7-0.4-10.1-2.1-11.2-5.9
@@ -67,56 +77,86 @@
 		c0.2,1.3,1.4,1.8,2.8,1.4C181.9,91.6,192.9,71.7,192.9,71.7z M216.3,13.2c-2.7,0-6.7,1.6-12.2,5c-1.4,0.8-3.8,2.4-6.9,4.9
 		c-2.4,2-4.5,4.1-6.3,6.1c-0.7,0.8-1.4,1.7-2.2,2.5c5.4-0.1,11.2-1.7,16.5-3.8c4.5-1.7,13-7.4,13.9-11.4
 		C219.5,14.4,217.8,13.2,216.3,13.2z"/>
-                <path id="XMLID_123_" class="sto" d="M233.6,52.9c-0.2,0.2-0.4,0.5-0.7,0.8c0,0-0.3,0.4-0.8,1c-2.9,3-6.4,5.6-9.7,6.1c-0.1,0.1-0.1,0.1-0.2,0.1
+                        <path id="XMLID_123_" class="sto" d="M233.6,52.9c-0.2,0.2-0.4,0.5-0.7,0.8c0,0-0.3,0.4-0.8,1c-2.9,3-6.4,5.6-9.7,6.1c-0.1,0.1-0.1,0.1-0.2,0.1
 		c-0.1,0-0.2,0-0.3,0.1c-0.2,0-0.4,0-0.6,0c-2.4,0-6.4-1.2-6.4-7.6c0-10.7,11.5-22.3,18.1-22.3c3.4,0,5.8,2.2,7.3,4.7
 		c0.2,0.4-0.2,1.3-2.9,1.3c-10,0-20.2,21.4-14.9,21.4c3.5,0,10.1-7.1,10.1-7.1s-0.5-1.5-0.5-3.7c0-4.9,5.9-7,5.9-2
 		c0,1.1-1.1,3-3,5.5c0.2,0.2,0.8,0.4,1.1,0.4c2.9,0,5.6-4.5,10.5-11.8c0.8-1.3,2.7-0.7,1.4,1.3c-1.1,1.8-7,12.7-12.1,12.7
 		C234.9,53.7,234.1,53.3,233.6,52.9z"/>
-                <path id="XMLID_125_" class="sto" d="M277.8,39.9c0.9-1.3,2.7-0.7,1.4,1.3c-1.3,1.9-14.5,19.7-20,19.7c-2.8,0-5.5-1.9-5.5-7.7
+                        <path id="XMLID_125_" class="sto" d="M277.8,39.9c0.9-1.3,2.7-0.7,1.4,1.3c-1.3,1.9-14.5,19.7-20,19.7c-2.8,0-5.5-1.9-5.5-7.7
 		c0,0-6,7.7-8.6,7.7c-2.5,0-6.4-2-6.4-7.4c0-8.3,14.4-22.3,20.2-22.3c4.3,0,5.5,3.5,5.5,3.5s13.1-20.9,13.1-24.4
 		c0-1.9,5.1-1.7,5.1,6c0,6.9-25.9,41.5-21.7,41.5C262.8,57.8,272.5,47.9,277.8,39.9z M262.3,36c-2.9,0-16.6,14.5-16.6,21.4
 		c0,0,0.1,0.5,0.5,0.5C249.7,57.9,266.1,36,262.3,36z"/>
-                <path id="XMLID_128_" class="sto" d="M309.2,39.9c0.9-1.3,2.7-0.7,1.4,1.3c-1.3,1.9-14.5,19.7-20,19.7c-2.8,0-5.5-1.9-5.5-7.7
+                        <path id="XMLID_128_" class="sto" d="M309.2,39.9c0.9-1.3,2.7-0.7,1.4,1.3c-1.3,1.9-14.5,19.7-20,19.7c-2.8,0-5.5-1.9-5.5-7.7
 		c0,0-6,7.7-8.6,7.7c-2.5,0-6.4-2-6.4-7.4c0-8.3,14.4-22.3,20.2-22.3c4.3,0,5.5,3.5,5.5,3.5S309,13.7,309,10.3c0-1.9,5.1-1.7,5.1,6
 		c0,6.9-25.9,41.5-21.7,41.5C294.3,57.8,303.9,47.9,309.2,39.9z M293.7,36c-2.9,0-16.6,14.5-16.6,21.4c0,0,0.1,0.5,0.5,0.5
 		C281.1,57.9,297.6,36,293.7,36z"/>
-                <path id="XMLID_131_" class="sto" d="M332.3,41.2c-1.3,2-15.7,19.7-23.3,19.7c0,0-5.8-0.1-5.8-7.4c0-10.9,14.3-22.5,18.3-22.5
+                        <path id="XMLID_131_" class="sto" d="M332.3,41.2c-1.3,2-15.7,19.7-23.3,19.7c0,0-5.8-0.1-5.8-7.4c0-10.9,14.3-22.5,18.3-22.5
 		c1.6,0,4.2,1.1,4.2,6.8s-12.7,15.5-15.8,15.5c0,0-2.2,4,0.9,4c4,0,14.8-9.4,20.1-17.3C331.7,38.6,333.5,39.3,332.3,41.2z M310.8,51
 		c8.2-4.8,12-12.6,10-12.6C318.8,38.4,310.8,51,310.8,51z"/>
-                <path id="XMLID_134_" class="sto" d="M355.4,40.8c-1,1.6-4.2,7.1-13.4,8.9c0,0.1,0,0.2,0,0.4c-0.1,8.9-5.9,10.8-9.1,10.8
+                        <path id="XMLID_134_" class="sto" d="M355.4,40.8c-1,1.6-4.2,7.1-13.4,8.9c0,0.1,0,0.2,0,0.4c-0.1,8.9-5.9,10.8-9.1,10.8
 		c-1.4,0-5.9-1.3-5.9-5.2c0-5.1,9.4-6.9,9.4-6.9s1.3-7.1,0.2-13.1c0,0-0.1-0.3-0.1-0.8c-1.2,2-2.8,4.4-4.4,6.7
 		c-1.1,1.6-2.5,0.3-1.6-1.1c2-3,5.6-8.4,6.7-11.9c0.4-1.4,1.2-4.4,2.3-3.6c1.4,1.1,5.3,3.8,5.3,7.2c0,3.2-2.6,3.2-2.9,15.5
 		c5.2-1.1,8.9-3.6,11.9-8.1C354.8,38.2,356.6,38.8,355.4,40.8z M336.3,50.9c0,0-7.3,1.7-7.3,5.1C329,58.7,334.4,58.8,336.3,50.9z"/>
-                <path id="XMLID_137_" class="sto" d="M378,40.8c-1,1.6-4.2,7.1-13.4,8.9c0,0.1,0,0.2,0,0.4c-0.1,8.9-5.9,10.8-9.1,10.8c-1.4,0-5.9-1.3-5.9-5.2
+                        <path id="XMLID_137_" class="sto" d="M378,40.8c-1,1.6-4.2,7.1-13.4,8.9c0,0.1,0,0.2,0,0.4c-0.1,8.9-5.9,10.8-9.1,10.8c-1.4,0-5.9-1.3-5.9-5.2
 		c0-5.1,9.4-6.9,9.4-6.9s1.3-7.1,0.2-13.1c0,0-0.1-0.3-0.1-0.8c-1.2,2-2.8,4.4-4.4,6.7c-1.1,1.6-2.5,0.3-1.6-1.1
 		c2-3,5.6-8.4,6.7-11.9c0.4-1.4,1.2-4.4,2.3-3.6c1.4,1.1,5.3,3.8,5.3,7.2c0,3.2-2.6,3.2-2.9,15.5c5.2-1.1,8.9-3.6,11.9-8.1
 		C377.5,38.2,379.3,38.8,378,40.8z M359,50.9c0,0-7.3,1.7-7.3,5.1C351.7,58.7,357,58.8,359,50.9z"/>
-            </svg>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="yah">
+            <div class="small-12 columns">
+                <a href="#secondPage">
+                <div id="drawLine" >
+                <svg viewBox="0 0 210 190" preserveAspectRatio="xMidYMid meet" id="arrow">
+                    <line id="line_1" class="st5" x1="0" y1="0" x2="102.3" y2="154.2"/>
+                    <line id="line_2" class="st5" x1="204.3" y1="0" x2="101.8" y2="154.3"/>
+                    <animate xlink:href="#line_1" attributeName="x1" from="102.3" to="0" dur="5s"/>
+                    <animate xlink:href="#line_1" attributeName="y1" from="154.2" to="0" dur="5s"/>
+                    <animate xlink:href="#line_2" attributeName="x1" from="101.8" to="204.3" dur="5s"/>
+                    <animate xlink:href="#line_2" attributeName="y1" from="154.3" to="0" dur="5s"/>
+
+                </svg>
+                </div>
+                </a>
+            </div>
         </div>
     </div>
-</div>
-<div class="row" id="yah">
-    <div class="small-12 columns">
-        <div id="drawLine">
-
-        </div>
+    <div class="section">
+        dcdsc
     </div>
 </div>
 <script>
+    //Variables
     var target = '#writing';
-
+    var count = 0;
+    var pathObj = {
+        "drawLine": {
+            "strokepath": [
+                {
+                    "path": "M 1.2 0.5 L 27.3 47.2",
+                    "duration": 600
+                },
+                {
+                    "path": "M 53.3 0.5 L 27.2 47.2",
+                    "duration": 600
+                }
+            ],
+            "dimensions": {
+                "width": 55,
+                "height": 48
+            }
+        }
+    };
+    //functions
     function setAttributes() {
-
         $(target).find('path').attr({'fill': 'none', 'stroke': '#fff', 'stroke-width': '2'});
     }
-
     function vectorInit() {
-
         $(target).each(function () {
-
             var sequence = $('path', this);
             var iter, vector, length;
-
             for (iter = 0; iter < sequence.length; iter++) {
                 vector = sequence[iter];
                 length = vector.getTotalLength();
@@ -124,18 +164,12 @@
             }
         });
     }
-
-    var count = 0;
-
     function drawCurves(callback) {
-
         var sequence = $(target).find('path');
         var total = sequence.length - 1;
         var vector = sequence.eq(count);
         var length = vector.attr('data-length');
-
         vector.animate({'stroke-dashoffset': 0}, {
-
             duration: 1.5 * length,
             easing: 'linear',
             complete: function () {
@@ -156,58 +190,21 @@
         setTimeout(function () {
             $('.sto').animate({'stroke-dashoffset': 0}, 1000)
                 .css({'fill': 'white', 'stroke-width': 0, 'transition': 'fill 1s stroke-width 1s'});
-            $("#theAcadmey").delay(1000).animate({ opacity: 1 }, 1000);
+            $("#theAcadmey").delay(1000).animate({opacity: 1}, 1000);
         }, 4500);
     }
+    //load functions
     $(document).ready(function () {
-
+        $('#fullpage').fullpage({
+            anchors:['firstPage', 'secondPage', 'thirdPage']
+        });
         setAttributes();
         vectorInit();
-
     });
-
     $(window).on('load', function () {
-
         drawCurves();
-
     });
     animateFill();
-
-    var pathObj = {
-        "drawLine": {
-            "strokepath": [
-                {
-                    "path": "M 1.2 0.5 L 27.3 47.2",
-                    "duration": 600
-                },
-                {
-                    "path": "M 53.3 0.5 L 27.2 47.2",
-                    "duration": 600
-                }
-            ],
-            "dimensions": {
-                "width": 55,
-                "height": 48
-            }
-        }
-    };
-
-
-    /*
-     Setup and Paint your lazyline!
-     */
-
-    $(document).ready(function () {
-        setTimeout(function () {
-            $('#drawLine').lazylinepainter(
-                {
-                    "svgData": pathObj,
-                    "strokeWidth": 2,
-                    "strokeColor": "#fff"
-                }).lazylinepainter('paint');
-        }, 4500);
-
-    });
 </script>
 </body>
 </html>
