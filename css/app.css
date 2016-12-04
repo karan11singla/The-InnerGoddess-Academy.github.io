@@ -11,6 +11,27 @@
 body{
     background: #350515;
 }
+.pace {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.pace-inactive {
+    display: none;
+}
+
+.pace .pace-progress {
+    background-color: rgba(53, 5, 21, 0.19999999999999996);
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: 100%;
+    bottom: 0;
+    width: 100%;
+}
 #meh{
     width: 100vw;
     height: 80vh;
