@@ -9,28 +9,14 @@
     font-style: normal;
 }
 body{
-    background: #350515;
-}
-.pace {
-    -webkit-pointer-events: none;
-    pointer-events: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-}
+    background: #AA076B; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #AA076B , #350515); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #AA076B , #350515); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-.pace-inactive {
-    display: none;
 }
-
-.pace .pace-progress {
-    background-color: rgba(53, 5, 21, 0.19999999999999996);
-    position: fixed;
+canvas {
+    position: absolute;
     z-index: -1;
-    top: 0;
-    right: 100%;
-    bottom: 0;
-    width: 100%;
 }
 #meh{
     width: 100vw;
@@ -50,6 +36,11 @@ body{
     stroke-width: 5;
     stroke: #fff;
     fill: #fff;
+}
+.sds{
+    stroke-width: 6;
+    stroke: #232323;
+    fill: #232323;
 }
 #writing {
     width: inherit;
@@ -112,8 +103,35 @@ body{
      width: 100vw;
      height: 20vh;
 }
-#drawLine{
+.drawLine{
     width: 50px;
     height:50px;
     margin: auto;
+}
+#hud{
+    color: white;
+    text-align: justify;
+    padding-left: 20px;
+    font-size: 20px;
+    font-family: Lato;
+    }
+#heh{
+    max-width: 100% !important;
+    color: white;
+}
+.hgh{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#hrruh{
+    background-color: #232323;
+    width: auto;
+}
+.hduh{
+    height: 60vh;
+}
+#arrow1{
+    position: relative;
 }
