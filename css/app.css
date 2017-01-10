@@ -18,29 +18,36 @@ canvas {
     position: absolute;
     z-index: -1;
 }
-#fp-nav ul li a span,
-.fp-slidesNav ul li a span {
-    background: white;
-    width: 9px !important;
-    height: 9px!important;
-    margin: -4.5px -4.5px -4.5px -4.5px !important;
+.dotstyle ul {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    cursor: default;
 }
 
-#fp-nav ul li a.active span,
-.fp-slidesNav ul li a.active span,
-#fp-nav ul li:hover a.active span,
-.fp-slidesNav ul li:hover a.active span {
-    width: 18px !important;
-    height: 18px !important;
-    margin: -9px 0 0 -9px!important;
-    background: white;
-    box-sizing: border-box;
+.dotstyle li {
+    position: relative;
+    display: block;
+    float: left;
+    margin: 0 16px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
 }
-.fp-prev{
-    margin-left: 10%;
-}
-.fp-next{
-    margin-right: 10%;
+.dotstyle li a {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border-radius: 50%;
+    background-color: #fff;
+    background-color: rgba(255,255,255,0.3);
+    text-indent: -999em;
+    cursor: pointer; /* make the text accessible to screen readers */
+    position: absolute;
 }
 #meh{
     width: 100vw;

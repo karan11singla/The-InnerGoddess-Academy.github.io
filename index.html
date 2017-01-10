@@ -11,10 +11,7 @@
     <script type="text/javascript">
         $(document).ready(function() {
             $('#fullpage').fullpage({
-                anchors:['firstPage', 'secondPage'],
-                navigation:true,
-                navigationPosition: 'left',
-                navigationTooltips: ['firstSlide', 'secondSlide']
+                anchors:['firstPage', 'secondPage']
             });
         });
     </script>
@@ -22,6 +19,16 @@
 
 <body>
 <canvas id="canvas"></canvas>
+<div class="dotstyle dotstyle-fillup">
+    <ul>
+        <li class="current"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</div>
 <div id="fullpage">
     <div class="section">
         <div class="row" id="meh">
