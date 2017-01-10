@@ -9,14 +9,38 @@
     font-style: normal;
 }
 body{
-    background: #AA076B; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #AA076B , #350515); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #AA076B , #350515); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #e96443; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #e96443 , #904e95); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #e96443 , #904e95); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 canvas {
     position: absolute;
     z-index: -1;
+}
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    background: white;
+    width: 9px !important;
+    height: 9px!important;
+    margin: -4.5px -4.5px -4.5px -4.5px !important;
+}
+
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span {
+    width: 18px !important;
+    height: 18px !important;
+    margin: -9px 0 0 -9px!important;
+    background: white;
+    box-sizing: border-box;
+}
+.fp-prev{
+    margin-left: 10%;
+}
+.fp-next{
+    margin-right: 10%;
 }
 #meh{
     width: 100vw;

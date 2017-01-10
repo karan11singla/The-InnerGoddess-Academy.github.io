@@ -11,7 +11,10 @@
     <script type="text/javascript">
         $(document).ready(function() {
             $('#fullpage').fullpage({
-                anchors:['firstPage', 'secondPage']
+                anchors:['firstPage', 'secondPage'],
+                navigation:true,
+                navigationPosition: 'left',
+                navigationTooltips: ['firstSlide', 'secondSlide']
             });
         });
     </script>
@@ -111,39 +114,27 @@
                 </div>
             </div>
         </div>
-        <div class="row" id="yah">
-            <div class="small-12 columns text-center">
-                <a href="#secondPage">
-                    <div class="drawLine">
-                        <svg viewBox="0 0 210 190" preserveAspectRatio="xMidYMid meet" width="50px" id="arrow">
-                            <line id="line_1" class="st5" x1="0" y1="0" x2="102.3" y2="154.2"/>
-                            <line id="line_2" class="st5" x1="204.3" y1="0" x2="101.8" y2="154.3"/>
-                            <animate xlink:href="#line_1" attributeName="x1" from="102.3" to="0" dur="5s"/>
-                            <animate xlink:href="#line_1" attributeName="y1" from="154.2" to="0" dur="5s"/>
-                            <animate xlink:href="#line_2" attributeName="x1" from="101.8" to="204.3" dur="5s"/>
-                            <animate xlink:href="#line_2" attributeName="y1" from="154.3" to="0" dur="5s"/>
-
-                        </svg>
-                    </div>
-                </a>
-            </div>
-        </div>
     </div>
     <div class="section">
-        <div class="row" id="heh">
-            <div class="small-12 large-12 columns hgh">
-                <div id="hud">
-                    <p><b>The Inner Goddess Academy</b> inspires women to discover themselves, fulfil their potential and
-                        pursue their passions. We enrich women with skills and information and equip them with the critical
-                        tools required to be at the forefront of leadership and innovation. Women in India constantly face
-                        blatant gender discrimination, systemic sexism, and they are simply not encouraged to take on leadership
-                        positions as much as their male counterparts. We at TIGA hope to bridge this gap through our
-                        personalised consultation services. Members gain access to our holistic development platforms,
-                        exclusive mentor network and benefit from highly personalised professional development,
-                        interpersonal skill training, career counselling and business consultation services.</p>
+            <div class="row" id="heh">
+                <div class="small-4 large-4 columns"></div>
+                <div class="small-4 large-4 columns hgh">
+                    <div id="hud">
+                        <p><b>The Inner Goddess Academy</b> inspires women to discover themselves, fulfil their potential and
+                            pursue their passions. We enrich women with skills and information and equip them with the critical
+                            tools required to be at the forefront of leadership and innovation. Women in India constantly face
+                            blatant gender discrimination, systemic sexism, and they are simply not encouraged to take on leadership
+                            positions as much as their male counterparts. We at TIGA hope to bridge this gap through our
+                            personalised consultation services. Members gain access to our holistic development platforms,
+                            exclusive mentor network and benefit from highly personalised professional development,
+                            interpersonal skill training, career counselling and business consultation services.</p>
+                    </div>
                 </div>
+                <div class="small-4 large-4 columns"></div>
             </div>
-        </div>
+    </div>
+    <div class="section">
+
     </div>
 </div>
 <script>
@@ -312,6 +303,72 @@
         //animation loop
         setInterval(draw, 33);
     }
+</script>
+<script>
+
+    var colors = new Array(
+        [62,35,255],
+        [60,255,60],
+        [255,35,98],
+        [45,175,230],
+        [255,0,255],
+        [255,128,0]);
+
+    var step = 0;
+    //color table indices for:
+    // current color left
+    // next color left
+    // current color right
+    // next color right
+    var colorIndices = [0,1,2,3];
+
+    //transition speed
+    var gradientSpeed = 0.002;
+
+    function updateGradient()
+    {
+
+        if ( $===undefined ) return;
+
+        var c0_0 = colors[colorIndices[0]];
+        var c0_1 = colors[colorIndices[1]];
+        var c1_0 = colors[colorIndices[2]];
+        var c1_1 = colors[colorIndices[3]];
+
+        var istep = 1 - step;
+        var r1 = Math.round(istep * c0_0[0] + step * c0_1[0]);
+        var g1 = Math.round(istep * c0_0[1] + step * c0_1[1]);
+        var b1 = Math.round(istep * c0_0[2] + step * c0_1[2]);
+        var color1 = "rgb("+r1+","+g1+","+b1+")";
+
+        var r2 = Math.round(istep * c1_0[0] + step * c1_1[0]);
+        var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
+        var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
+        var color2 = "rgb("+r2+","+g2+","+b2+")";
+
+        $('body').css({
+            background: "-webkit-gradient(linear, left top, right top, from("+color1+"), to("+color2+"))"}).css({
+            background: "-moz-linear-gradient(left, "+color1+" 0%, "+color2+" 100%)"});
+
+        step += gradientSpeed;
+        if ( step >= 1 )
+        {
+            step %= 1;
+            colorIndices[0] = colorIndices[1];
+            colorIndices[2] = colorIndices[3];
+
+            //pick two new target color indices
+            //do not pick the same as the current one
+            colorIndices[1] = ( colorIndices[1] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
+            colorIndices[3] = ( colorIndices[3] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
+
+        }
+    }
+
+    setInterval(updateGradient,10);
+</script>
+<script>
+
 </script>
 </body>
 </html>
