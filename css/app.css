@@ -138,11 +138,15 @@ canvas {
     color: white;
     height: 100vh;
     width: 100vw;
+    display: flex;
+    align-content: center;
 }
 .slide1{
     height: 100vh;
 }
 .hgh{
+    display: flex;
+    align-content: center;
 }
 #hrruh{
     background-color: #232323;
@@ -183,6 +187,9 @@ canvas {
     margin-left: auto;
     margin-right: auto;
     float: none !important;
+    display: flex;
+    align-content: center;
+    justify-content: center;
     max-width: 100vh;
 }
 #videorow{
@@ -197,6 +204,9 @@ canvas {
 #slide3{
     padding-top: 5vh;
     width: 90%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
     max-width: initial;
