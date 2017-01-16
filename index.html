@@ -10,10 +10,11 @@
     <script src="js/vendor/foundation.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
     <script src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+    <script src="https://use.fontawesome.com/fcbf6c9e4f.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('#fullpage').fullpage({
-                anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
+                anchors: ['Home', 'About', 'Our_Why', 'Our_Programs','Videos','Social','Connect'],
                 navigation: true,
                 navigationPosition: 'left',
                 onLeave: function (index, nextIndex, direction) {
@@ -28,6 +29,14 @@
 </head>
 
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=878103132298291";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <canvas id="canvas"></canvas>
 <div id="fullpage">
     <div class="section">
@@ -123,21 +132,21 @@
         </div>
     </div>
     <div class="section">
-        <div class="row" id="heh">
+        <div class="row heh">
             <div class="small-6 large-6 columns slide1">
                 <img src="slide1.svg"/>
             </div>
             <div class="small-6 large-6 columns hgh">
                 <div id="flowers">
-                    <img src="Round.svg" height="">
+                    <img src="Round.svg">
                 </div>
             </div>
         </div>
     </div>
     <div class="section">
-        <div class="row">
+        <div class="row heh">
             <div class="small-6 large-6 columns">
-                <img src="1.svg"/>
+                <img src="1.svg" class="image">
             </div>
             <div class="small-6 large-6 columns slide1">
                 <img src="slide2.svg"/>
@@ -145,25 +154,30 @@
         </div>
     </div>
     <div class="section">
-        <div class="row" id="banner">
+        <div class="row banner">
             <img src="banner.svg"/>
         </div>
         <div class="row" id="slide3">
-            <div class="small-4 large-4 columns demo-3">
+            <div class="small-6 large-3 columns demo-3">
                 <div class="box">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                    <a href="#" data-open="inspire">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
                         <line class="top" x1="0" y1="0" x2="900" y2="0"/>
                         <line class="left" x1="0" y1="460" x2="0" y2="-920"/>
                         <line class="bottom" x1="300" y1="460" x2="-600" y2="460"/>
                         <line class="right" x1="300" y1="0" x2="300" y2="1380"/>
                     </svg>
-                    <h3>I</h3>
+                    </a>
+                        <h3>I</h3>
                     <span>Inspire</span>
+
                 </div>
+
             </div>
-            <div class="small-4 large-4 columns demo-3">
+            <div class="small-6 large-3 columns demo-3">
+                <a href="#" data-open="connect">
                 <div class="box">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
                         <line class="top" x1="0" y1="0" x2="900" y2="0"/>
                         <line class="left" x1="0" y1="460" x2="0" y2="-920"/>
                         <line class="bottom" x1="300" y1="460" x2="-600" y2="460"/>
@@ -172,10 +186,12 @@
                     <h3>C</h3>
                     <span>Connect</span>
                 </div>
+                </a>
             </div>
-            <div class="small-4 large-4 columns demo-3">
+            <div class="small-6 large-3 columns demo-3">
+                <a href="#" data-open="act">
                 <div class="box">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
                         <line class="top" x1="0" y1="0" x2="900" y2="0"/>
                         <line class="left" x1="0" y1="460" x2="0" y2="-920"/>
                         <line class="bottom" x1="300" y1="460" x2="-600" y2="460"/>
@@ -184,15 +200,118 @@
                     <h3>A</h3>
                     <span>Act</span>
                 </div>
+                </a>
+            </div>
+            <div class="small-6 large-3 columns demo-3">
+                <a href="#" data-open="live">
+                <div class="box">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
+                        <line class="top" x1="0" y1="0" x2="900" y2="0"/>
+                        <line class="left" x1="0" y1="460" x2="0" y2="-920"/>
+                        <line class="bottom" x1="300" y1="460" x2="-600" y2="460"/>
+                        <line class="right" x1="300" y1="0" x2="300" y2="1380"/>
+                    </svg>
+                    <h3><i class="fa fa-play-circle" aria-hidden="true"></i></h3>
+                    <span>Live</span>
+                </div>
+                </a>
             </div>
         </div>
     </div>
+    <div class="section">
+        <div class="row banner">
+            <img src="videobanner.svg"/>
+        </div>
+        <div class="row" id="videorow">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/r8WJI6SA17c" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="section">
+        <div class="row banner">
+            <img src="socialbanner.svg"/>
+        </div>
+        <div class="row" id="socialrow">
+                <div class="small-6 large-3 columns boxes">
+                    <div class="social">
+                        <a href="https://www.facebook.com/theinnergoddessacademy/">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                                <line class="top" x1="0" y1="0" x2="300" y2="0"></line>
+                                <line class="left" x1="0" y1="100" x2="0" y2="-200"></line>
+                                <line class="bottom" x1="100" y1="100" x2="-200" y2="100"></line>
+                                <line class="right" x1="100" y1="0" x2="100" y2="300"></line>
+                            </svg>
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="small-6 large-3 columns boxes">
+                    <div class="social">
+                        <a href="https://twitter.com/theigacademy">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                                <line class="top" x1="0" y1="0" x2="300" y2="0"></line>
+                                <line class="left" x1="0" y1="100" x2="0" y2="-200"></line>
+                                <line class="bottom" x1="100" y1="100" x2="-200" y2="100"></line>
+                                <line class="right" x1="100" y1="0" x2="100" y2="300"></line>
+                            </svg>
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="small-6 large-3 columns boxes ">
+                    <div class="social ">
+                        <a href="https://www.instagram.com/innergoddessacademy/">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                                <line class="top" x1="0" y1="0" x2="300" y2="0"></line>
+                                <line class="left" x1="0" y1="100" x2="0" y2="-200"></line>
+                                <line class="bottom" x1="100" y1="100" x2="-200" y2="100"></line>
+                                <line class="right" x1="100" y1="0" x2="100" y2="300"></line>
+                            </svg>
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="small-6 large-3 columns boxes">
+                    <div class="social">
+                        <a href="#" data-open="insta">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                                <line class="top" x1="0" y1="0" x2="300" y2="0"></line>
+                                <line class="left" x1="0" y1="100" x2="0" y2="-200"></line>
+                                <line class="bottom" x1="100" y1="100" x2="-200" y2="100"></line>
+                                <line class="right" x1="100" y1="0" x2="100" y2="300"></line>
+                            </svg>
+                            <i class="fa fa-snapchat-ghost" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+    </div>
     <div class="section" id="contact">
         <form>
-            <input type="text" name="email" title="email" placeholder="Contact Us">
+            <input type="text" name="email" title="email" placeholder="Connect with us">
         </form>
     </div>
+
 </div>
+<div id="inspire" class="reveal medium" data-reveal>
+    <h2 id="inspireTitle">Inspiration Sessions</h2>
+    <p>Our inspiration sessions brim with positive energy and motivational zest which will inspire you to be the best version of yourself! We facilitate one session during the 4th week of every month. The domains range from arts, sciences, management and even basic grooming.Sign up for a session today!</p>
+
+</div>
+<div id="connect" class="reveal" data-reveal>
+    <h2 id="connectTitle">Connection Phase</h2>
+    <p>The Connection Phase consists of two parts.<br>1. A 2-day Inner Goddess conference organised for women to discover their inner selves and explore their potential and <br>2. A mentorship module to connect these women to eminent women from the domain of their choice. This phase is facilitated once every 3 months! Register with us now.</p>
+</div>
+<div id="act" class="reveal" data-reveal>
+    <h2 id="actTitle">Action Phase </h2>
+    <p>Do you have something left unachieved, or perhaps a passion not discovered?
+        We provide you a launchpad to take ownership and build something of your own. It can range from economically empowering yourself to starting your own business! Want to know more? Call us today if this intrigued you.</p>
+</div>
+<div id="insta" class="reveal" data-reveal >
+    <img src="snapcode.svg"/>
+    <h1>Connect with us at the-iga or download the snapcode and scan it!</h1>
+</div>
+
 <script>
     //Variables
     var target = '#writing';
@@ -398,7 +517,7 @@
     setInterval(updateGradient, 10);
 </script>
 <script>
-
+$(document).foundation();
 </script>
 </body>
 </html>
