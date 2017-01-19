@@ -34,19 +34,16 @@ canvas {
     margin: -8px 0 0 -8px !important;
     background: white;
 }
-#meh{
+/*Section 1 */
+
+#section1row{
     width: 100vw;
     height: 80vh;
 }
 
-#hmm{
+#TIGA{
     width: 50%;
     height: inherit;
-}
-.columns{
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    padding-bottom: 10px;
 }
 .st5 {
     stroke-width: 5;
@@ -102,7 +99,7 @@ canvas {
     color: white;
     fill: #fff;
     opacity: 0;
-    }
+}
 #box {
     position: absolute;
 }
@@ -115,71 +112,57 @@ canvas {
     -webkit-transition: -webkit-transform .6s;
     transition: transform .6s;
 }
-#yah{
-     width: 100vw;
-     height: 20vh;
-}
-.drawLine{
-    width: 50px;
-    height:50px;
-    margin: auto;
-}
-#hud{
-    color: white;
-    text-align: center;
-    font-size: 20px;
-    font-family: Lato;
-    margin-top: -20vh;
-    }
-.image{
-    height: 100vh;
-}
-.heh{
+
+/*Section 2 */
+
+.section2row{
     display: flex;
     align-content: center;
     justify-content: center;
     height: 100vh;
     width:100vw;
 }
+.anim{
+    display: flex;
+    align-content: center;
+}
+
+/*Section 3 */
+
 .slide1{
     height: 100vh;
 }
-.hgh{
-    display: flex;
-    align-content: center;
-}
-#hrruh{
-    background-color: #232323;
-    width: auto;
-}
-.hduh{
-    height: 60vh;
-}
-#arrow1{
-    position: relative;
-}
-#row2{
-    height: 40vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#heading{
-    font-family: 'existenceLight';
-    text-align: center;
-}
-.flowers{
-    display: flex;
-    align-content: center;
-    justify-content: center;
+.image{
     height: 100vh;
-    width: 50vw;
+}
 
+/*Section 4 */
+
+#slide3{
+    padding-top: 5vh;
+    width: 90%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: initial;
 }
-.banner{
-    width: 45vw;
-    height: auto;
+
+/*Section 5 */
+
+#videorow{
+    height: 40vh;
+    margin-top: 20vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    float: none !important;
+    max-width: 100vh;
 }
+
+/*Section 6 */
+
 #socialrow{
     height: 40vh;
     margin-top: 30vh;
@@ -192,25 +175,9 @@ canvas {
     justify-content: center;
     max-width: 100vh;
 }
-#videorow{
-    height: 40vh;
-    margin-top: 20vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    float: none !important;
-    max-width: 100vh;
-}
-#slide3{
-    padding-top: 5vh;
-    width: 90%;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: initial;
-}
+
+/*Section 7 */
+
 #contact input{
     width: 65vw;
     display: block;
@@ -224,16 +191,38 @@ canvas {
 }
 #contact input::-webkit-input-placeholder{
     color: white;
-    font-family: "Existence Light";
+    font-family: "Josefin Slab", serif;
 }
 #contact input::-moz-placeholder{
     color: white;
-    font-family: "Existence Light";
+    font-family: "Josefin Slab", serif;
+}
+
+/* Common */
+
+.columns{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-bottom: 10px;
+}
+.flowers{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 100vh;
+    width: 50vw;
+
+}
+.banner{
+    width: 45vw;
+    height: auto;
 }
 .reveal{
     z-index: 999 !important;
 }
+
 /* social buttons */
+
 .social {
     width: 100px;
     height: 100px;
@@ -347,7 +336,6 @@ canvas {
     -webkit-transform: translateY(-200px);
     transform: translateY(-200px);
 }
-
 .social:hover h3, .social:hover span {
     color: white;
 }
@@ -357,6 +345,7 @@ canvas {
 .social:hover svg line {
     stroke: white;
 }
+
 /* Box Effects */
 .box {
     text-align: center;
@@ -372,13 +361,11 @@ canvas {
     -webkit-transition: background 0.4s 0.5s;
     transition: background 0.4s 0.5s;
 }
-
 .box:hover {
     background: rgba(255,255,255,0);
     -webkit-transition-delay: 0s;
     transition-delay: 0s;
 }
-
 .box h3 {
     font-family: "Josefin Slab", serif;
     font-size: 180px;
@@ -387,9 +374,8 @@ canvas {
     font-weight: 400;
     width: 100%;
 }
-
 .box span {
-    font-family: "Existence Light";
+    font-family: "Josefin Slab", serif;
     display: block;
     font-weight: 400;
     text-transform: uppercase;
@@ -397,20 +383,17 @@ canvas {
     font-size: 20px;
     padding: 5px;
 }
-
 .box h3,
 .box span {
     -webkit-transition: color 0.4s 0.5s;
     transition: color 0.4s 0.5s;
 }
-
 .box:hover h3,
 .box:hover span {
     color: #fff;
     -webkit-transition-delay: 0s;
     transition-delay: 0s;
 }
-
 .box svg {
     position: absolute;
     top: 0;
@@ -419,7 +402,6 @@ canvas {
     display: block;
 
 }
-
 .box svg line {
     stroke-width: 5;
     stroke: #ecf0f1;
@@ -427,37 +409,30 @@ canvas {
     -webkit-transition: all .8s ease-in-out;
     transition: all .8s ease-in-out;
 }
-
 .box:hover svg line {
     -webkit-transition-delay: 0.1s;
     transition-delay: 0.1s;
 }
-
 .box svg line.top,
 .box svg line.bottom {
     stroke-dasharray: 330 240;
 }
-
 .box svg line.left,
 .box svg line.right {
     stroke-dasharray: 490 400;
 }
-
 .box:hover svg line.top {
     -webkit-transform: translateX(-600px);
     transform: translateX(-600px);
 }
-
 .box:hover svg line.bottom {
     -webkit-transform: translateX(600px);
     transform: translateX(600px);
 }
-
 .box:hover svg line.left {
     -webkit-transform: translateY(920px);
     transform: translateY(920px);
 }
-
 .box:hover svg line.right {
     -webkit-transform: translateY(-920px);
     transform: translateY(-920px);
@@ -473,43 +448,35 @@ canvas {
     -webkit-transition: background 0.3s;
     transition: background 0.3s;
 }
-
 .demo-3 .box:hover {
     background: rgba(0,0,0,0.4);
 }
-
 .demo-3 .box h3,
 .demo-3 .box span {
     -webkit-transition: none;
     transition: none;
 }
-
 .demo-3 .box svg line {
     -webkit-transition: all .5s;
     transition: all .5s;
 }
-
 .demo-3 .box:hover svg line {
     stroke-width: 10;
     -webkit-transition-delay: 0s;
     transition-delay: 0s;
 }
-
 .demo-3 .box:hover svg line.top {
     -webkit-transform: translateX(-300px);
     transform: translateX(-300px);
 }
-
 .demo-3 .box:hover svg line.bottom {
     -webkit-transform: translateX(300px);
     transform: translateX(300px);
 }
-
 .demo-3 .box:hover svg line.left {
     -webkit-transform: translateY(460px);
     transform: translateY(460px);
 }
-
 .demo-3 .box:hover svg line.right {
     -webkit-transform: translateY(-460px);
     transform: translateY(-460px);
