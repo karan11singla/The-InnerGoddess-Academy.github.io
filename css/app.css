@@ -177,17 +177,36 @@ canvas {
 }
 
 /*Section 7 */
-
+#contactrow{
+    height: 70vh;
+}
+#form
+{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 4vh;
+}
 #contact input{
-    width: 65vw;
-    display: block;
-    margin: 0 auto;
+    width: 35vw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
     background: transparent;
     border-width: 0 0 3px 0;
     border-color: transparent transparent white transparent;
     box-shadow: none;
     color: white;
-    font-size: 35px;
+    font-size: 25px;
+    margin-top:20px;
+}
+#contact textarea{
+    width: 35vw;
+    margin-top: 30px;
+    box-shadow: none;
+    border: none;
+    font-size: 25px;
+    color: lightgray;
 }
 #contact input::-webkit-input-placeholder{
     color: white;
@@ -197,7 +216,37 @@ canvas {
     color: white;
     font-family: "Josefin Slab", serif;
 }
+#contact textarea::-webkit-input-placeholder{
+    color: lightgray;
+    font-family: "Josefin Slab", serif;
+}
+#contact textarea::-moz-placeholder{
+    color: white;
+    font-family: "Josefin Slab", serif;
 
+}
+
+.button{
+    background: transparent;
+    font-size: 20px;
+    color: white;
+    transition: border-color ease-in 1s;
+    font-family: "Josefin Slab", serif;
+    border-radius: 5px;
+}
+.buttons{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.button:hover{
+    background: transparent;
+    border-color: white;
+    border-width: 2px;
+    transition: border-color ease-in 1s;
+    box-shadow: none;
+
+}
 /* Common */
 
 .columns{

@@ -3,7 +3,6 @@
 <head>
     <title>The Inner Goddess Academy</title>
     <meta charset="UTF-8">
-    <meta name="description" content="The Inner Goddess Academy inspires women to discover themselves, fulfil their potential and pursue their passions. We enrich women with skills and information and equip them with the critical tools required to be at the forefront of leadership and innovation">
     <meta name="keywords" content="WOMEN,women,TIGA,The,Inner,Goddess,Academy,empowerement,culturals,fun,entertainment,media,women power">
     <meta name="robots" content="index">
     <meta name="author" content="Vishal P">
@@ -12,37 +11,7 @@
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.2/jquery.fullPage.css"/>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.2/jquery.fullPage.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/js/foundation.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
-    <script type="text/javascript" src="https://use.fontawesome.com/fcbf6c9e4f.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#fullpage').fullpage({
-                anchors: ['Home', 'About', 'Our_Why', 'Our_Programs','Videos','Social','Connect'],
-                navigation: true,
-                navigationPosition: 'left',
-                onLeave: function (index, nextIndex, direction) {
-                    if (index == 1 && nextIndex == 2 && direction == 'up' || direction == 'down'){}
 
-
-                }
-            });
-        });
-
-    </script>
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-90598546-1', 'auto');
-        ga('send', 'pageview');
-
-    </script>
 </head>
 
 <body>
@@ -144,12 +113,12 @@
         <div class="row section2row">
             <div class="small-6 large-6 columns">
                 <div class="flowers">
-                <img src="slide1.svg" width="80%" height="80%">
+                <img src="svg/slide1.svg" width="80%" height="80%">
                 </div>
             </div>
             <div class="small-6 large-6 columns anim">
                 <div class="flowers">
-                    <img src="Round.svg">
+                    <img src="svg/Round.svg">
                 </div>
             </div>
         </div>
@@ -157,18 +126,18 @@
     <div class="section">
         <div class="row">
             <div class="small-6 large-6 columns">
-                <img src="1.svg" class="image">
+                <img src="svg/1.svg" class="image">
             </div>
             <div class="small-6 large-6 columns slide1">
                 <div class="flowers">
-                <img src="slide2.svg" width="80%" height="80%" />
+                <img src="svg/slide2.svg" width="80%" height="80%" />
                 </div>
                 </div>
         </div>
     </div>
     <div class="section">
         <div class="row banner">
-            <img src="banner.svg"/>
+            <img src="svg/banner.svg"/>
         </div>
         <div class="row" id="slide3">
             <div class="small-6 large-3 columns demo-3">
@@ -188,7 +157,7 @@
 
             </div>
             <div class="small-6 large-3 columns demo-3">
-                <a href="#" data-open="connect">
+                <a href="#" data-open="connect1">
                 <div class="box">
                     <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
                         <line class="top" x1="0" y1="0" x2="900" y2="0"/>
@@ -218,7 +187,7 @@
             <div class="small-6 large-3 columns demo-3">
                 <a href="#" data-open="live">
                 <div class="box">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
                         <line class="top" x1="0" y1="0" x2="900" y2="0"/>
                         <line class="left" x1="0" y1="460" x2="0" y2="-920"/>
                         <line class="bottom" x1="300" y1="460" x2="-600" y2="460"/>
@@ -233,7 +202,7 @@
     </div>
     <div class="section">
         <div class="row banner">
-            <img src="videobanner.svg"/>
+            <img src="svg/videobanner.svg"/>
         </div>
         <div class="row" id="videorow">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/r8WJI6SA17c" frameborder="0" allowfullscreen></iframe>
@@ -241,7 +210,7 @@
     </div>
     <div class="section">
         <div class="row banner">
-            <img src="socialbanner.svg"/>
+            <img src="svg/socialbanner.svg"/>
         </div>
         <div class="row" id="socialrow">
                 <div class="small-6 large-3 columns boxes">
@@ -300,19 +269,33 @@
 
     </div>
     <div class="section" id="contact">
-        <form>
-            <input type="text" name="email" title="email" placeholder="Connect with us">
-        </form>
+        <div class="row banner">
+            <img src="svg/connectbanner.svg"/>
+        </div>
+        <div class="row" id="contactrow">
+        <div id="form">
+            <form id='foo'>
+                <input id='name' name='name' type='text' title="name" placeholder="Name">
+                <input id='email' name='email' type='email' title="email" placeholder="Email">
+                <input id='phone' name='phone' type='tel' title="phone" placeholder="Phone">
+                <textarea id='message' name='message' rows='5' title="message" placeholder="Any message for us?"></textarea>
+                <div class="buttons">
+                    <div id='success'></div>
+                    <button type='submit' class="button">Send</button>
+                </div>
+            </form>
+        </div>
+        </div>
     </div>
 
 </div>
 <div id="inspire" class="reveal medium" data-reveal>
     <h2 id="inspireTitle">Inspiration Sessions</h2>
-    <p>Our inspiration sessions brim with positive energy and motivational zest which will inspire you to be the best version of yourself! We facilitate one session during the 4th week of every month. The domains range from arts, sciences, management and even basic grooming.Sign up for a session today!
+    <p>Our inspiration sessions brim with positive energy and motivational zest which will inspire you to be the best version of yourself! We facilitate one session during the 4th week of every month. The domains range from arts, sciences, management and even basic grooming. Sign up for a session today!
         <br> Contact Vignesh for more details at +91 87544 30612 or email us at <a href="mailto:connect@the-iga.com">connect@the-iga.com</a></p>
 
 </div>
-<div id="connect" class="reveal" data-reveal>
+<div id="connect1" class="reveal" data-reveal>
     <h2 id="connectTitle">Connection Phase</h2>
     <p>The Connection Phase consists of two parts.<br>1. A 2-day Inner Goddess conference organised for women to discover their inner selves and explore their potential and
         <br>2. A mentorship module to connect these women to eminent women from the domain of their choice. This phase is facilitated once every 3 months! Register with us now.
@@ -327,14 +310,47 @@
 <div id="live" class="reveal" data-reveal>
     <h2 id="liveTitle">TIGA LIVE <i class="fa fa-play-circle" aria-hidden="true"></i></h2>
     <p>
-        TIGALive is a brand new initiative by TheInnerGoddessAcademy. It's a physical forum for all women to come and voice their opinion. There's a rant space, compliment corner and ambition section curated for all of you powerful goddesses out there! We at TIGA believe that it's important for women to lift each other up and this is our small way of doing it.<br>Ping us to do one at your college/workplace!
+        It's a physical forum for all women to come and voice their opinion. There's a rant space, compliment corner and ambition section curated for all of you powerful goddesses out there! We at TIGA believe that it's important for women to lift each other up and this is our small way of doing it.<br>Ping us to do one at your college/workplace!
+        <br> Contact Vignesh for more details at +91 77084 64533 or email us at <a href="mailto:connect@the-iga.com">connect@the-iga.com</a>
     </p>
 </div>
 <div id="insta" class="reveal" data-reveal >
-    <img src="snapcode.svg"/>
+    <img src="svg/snapcode.svg"/>
     <h1>Connect with us at the-iga or download the snapcode and scan it!</h1>
 </div>
 
+<script src="js/vendor/jquery.js"></script>
+<script type="text/javascript" src="google-sheet.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.2/jquery.fullPage.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/js/foundation.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+<script type="text/javascript" src="https://use.fontawesome.com/fcbf6c9e4f.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#fullpage').fullpage({
+            anchors: ['Home', 'About', 'Our_Why', 'Our_Programs','Videos','Social','Connect'],
+            navigation: true,
+            navigationPosition: 'left',
+            onLeave: function (index, nextIndex, direction) {
+                if (index == 1 && nextIndex == 2 && direction == 'up' || direction == 'down'){}
+
+
+            }
+        });
+    });
+
+</script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-90598546-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
 <script>
     //Variables
     var target = '#writing';
@@ -384,13 +400,6 @@
         }, 4500);
     }
     //load functions
-    $(document).ready(function () {
-        setAttributes();
-        vectorInit();
-        $('#fullpage').fullpage({
-            anchors: ['firstPage', 'secondPage', 'thirdPage']
-        });
-    });
     $(window).on('load', function () {
         drawCurves();
         animateFill();
