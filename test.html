@@ -1,24 +1,143 @@
-<!DOCTYPE html>
-<html lang='en'>
-<head>
-    <meta charset='utf-8'>
-    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
-    <meta content='width=device-width, initial-scale=1' name='viewport'>
-</head>
-<body>
-<!-- Contact Form - sent to a Google Sheet -->
-<form id='foo'>
+<script>
+    window.onload = function () {
+        //canvas init
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
 
-        <input id='name' name='name' title='name' type='text'>
-    <input id='email' name='email' type='email'>
-    <input id='phone' name='phone' type='tel'>
-    <textarea id='message' name='message' rows='5'></textarea>
-    <div id='success'></div>
-    <button type='submit'>Send</button>
-</form>
+        //canvas dimensions
+        var W = window.innerWidth;
+        var H = window.innerHeight;
+        canvas.width = W;
+        canvas.height = H;
 
-<script src="js/vendor/jquery.js"></script>
-<!-- Custom Theme JavaScript -->
-<script src='google-sheet.js'></script>
-</body>
-</html>
+        //snowflake particles
+        var mp = 25; //max particles
+        var particles = [];
+        for (var i = 0; i < mp; i++) {
+            particles.push({
+                x: Math.random() * W, //x-coordinate
+                y: Math.random() * H, //y-coordinate
+                r: Math.random() * 4 + 1, //radius
+                d: Math.random() * mp //density
+            })
+        }
+
+        //Lets draw the flakes
+        function draw() {
+            ctx.clearRect(0, 0, W, H);
+
+            ctx.fillStyle = "rgba(255, 255, 255, 0.8)";
+            ctx.beginPath();
+            for (var i = 0; i < mp; i++) {
+                var p = particles[i];
+                ctx.moveTo(p.x, p.y);
+                ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2, true);
+            }
+            ctx.fill();
+            update();
+        }
+
+        //Function to move the snowflakes
+        //angle will be an ongoing incremental flag. Sin and Cos functions will be applied to it to create vertical and horizontal movements of the flakes
+        var angle = 0;
+
+        function update() {
+            angle += 0.01;
+            for (var i = 0; i < mp; i++) {
+                var p = particles[i];
+                //Updating X and Y coordinates
+                //We will add 1 to the cos function to prevent negative values which will lead flakes to move upwards
+                //Every particle has its own density which can be used to make the downward movement different for each flake
+                //Lets make it more random by adding in the radius
+                p.y += Math.cos(angle + p.d) + 1 + p.r / 2;
+                p.x += Math.sin(angle) * 2;
+
+                //Sending flakes back from the top when it exits
+                //Lets make it a bit more organic and let flakes enter from the left and right also.
+                if (p.x > W + 5 || p.x < -5 || p.y > H) {
+                    if (i % 3 > 0) //66.67% of the flakes
+                    {
+                        particles[i] = {x: Math.random() * W, y: -10, r: p.r, d: p.d};
+                    }
+                    else {
+                        //If the flake is exitting from the right
+                        if (Math.sin(angle) > 0) {
+                            //Enter from the left
+                            particles[i] = {x: -5, y: Math.random() * H, r: p.r, d: p.d};
+                        }
+                        else {
+                            //Enter from the right
+                            particles[i] = {x: W + 5, y: Math.random() * H, r: p.r, d: p.d};
+                        }
+                    }
+                }
+            }
+        }
+
+        //animation loop
+        setInterval(draw, 33);
+    }
+</script><!--Snow-->
+<script>
+
+    var colors = new Array(
+        [62, 35, 255],
+        [60, 255, 60],
+        [255, 35, 98],
+        [45, 175, 230],
+        [255, 0, 255],
+        [255, 128, 0]);
+
+    var step = 0;
+    //color table indices for:
+    // current color left
+    // next color left
+    // current color right
+    // next color right
+    var colorIndices = [0, 1, 2, 3];
+
+    //transition speed
+    var gradientSpeed = 0.002;
+
+    function updateGradient() {
+
+        if ($ === undefined) return;
+
+        var c0_0 = colors[colorIndices[0]];
+        var c0_1 = colors[colorIndices[1]];
+        var c1_0 = colors[colorIndices[2]];
+        var c1_1 = colors[colorIndices[3]];
+
+        var istep = 1 - step;
+        var r1 = Math.round(istep * c0_0[0] + step * c0_1[0]);
+        var g1 = Math.round(istep * c0_0[1] + step * c0_1[1]);
+        var b1 = Math.round(istep * c0_0[2] + step * c0_1[2]);
+        var color1 = "rgb(" + r1 + "," + g1 + "," + b1 + ")";
+
+        var r2 = Math.round(istep * c1_0[0] + step * c1_1[0]);
+        var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
+        var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
+        var color2 = "rgb(" + r2 + "," + g2 + "," + b2 + ")";
+
+        $('body').css({
+            background: "-webkit-gradient(linear, left top, right top, from(" + color1 + "), to(" + color2 + "))"
+        }).css({
+            background: "-moz-linear-gradient(left, " + color1 + " 0%, " + color2 + " 100%)"
+        });
+
+        step += gradientSpeed;
+        if (step >= 1) {
+            step %= 1;
+            colorIndices[0] = colorIndices[1];
+            colorIndices[2] = colorIndices[3];
+
+            //pick two new target color indices
+            //do not pick the same as the current one
+            colorIndices[1] = ( colorIndices[1] + Math.floor(1 + Math.random() * (colors.length - 1))) % colors.length;
+            colorIndices[3] = ( colorIndices[3] + Math.floor(1 + Math.random() * (colors.length - 1))) % colors.length;
+
+        }
+    }
+
+    setInterval(updateGradient, 10);
+</script><!--Background-->
