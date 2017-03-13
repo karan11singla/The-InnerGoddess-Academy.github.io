@@ -8,23 +8,20 @@
   font-weight: normal;
   font-style: normal;
 }
-body{
-  background: black;
-}
 canvas {
   position: absolute;
   z-index: -1;
 }
 /*Section 1 */
 
-#section1row{
-  width: 100vw;
-  height: 80vh;
-}
-
 #TIGA{
-  width: 50%;
-  height: inherit;
+  width: 100%;
+  height: 100%;
+  display:flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
 }
 .st5 {
   stroke-width: 5;
@@ -42,6 +39,7 @@ canvas {
   display: flex;
   align-items: center;
   align-content: center;
+  justify-content: center;
 
 }
 @media screen and (min-width: 64em) {
@@ -94,26 +92,9 @@ canvas {
   transition: transform .6s;
 }
 
-/*Section 2 */
-
-.section2row{
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  height: 100vh;
-  width:100vw;
-}
-.anim{
-  display: flex;
-  align-content: center;
-}
-
 /*Section 3 */
 
 .slide1{
-  height: 100vh;
-}
-.image{
   height: 100vh;
 }
 
@@ -243,14 +224,12 @@ canvas {
   padding-bottom: 10px;
 
 }
-
-.flowers{
+.image{
+  width: 100%;
+  height: 100%;
   display: flex;
   align-content: center;
   justify-content: center;
-  height: 100vh;
-  width: 50vw;
-
 }
 .banner{
   width: 45vw;
