@@ -1,517 +1,517 @@
 @font-face{
-  font-family: 'existenceLight';
-  src: url('existenceLight.eot');
-  src: url('existenceLight.eot?#iefix') format('embedded-opentype'),
-  url('existenceLight.woff') format('woff'),
-  url('existenceLight.ttf') format('truetype'),
-  url('existenceLight.svg#existencelight') format('svg');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'existenceLight';
+    src: url('existenceLight.eot');
+    src: url('existenceLight.eot?#iefix') format('embedded-opentype'),
+    url('existenceLight.woff') format('woff'),
+    url('existenceLight.ttf') format('truetype'),
+    url('existenceLight.svg#existencelight') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 body{
-  background: black;
+    background: black;
 }
 canvas {
-  position: absolute;
-  z-index: -1;
+    position: absolute;
+    z-index: -1;
 }
 /*Section 1 */
 
 #section1row{
-  width: 100vw;
-  height: 80vh;
+    width: 100vw;
+    height: 80vh;
 }
 
 #TIGA{
-  width: 50%;
-  height: inherit;
+    width: 50%;
+    height: inherit;
 }
 .st5 {
-  stroke-width: 5;
-  stroke: #fff;
-  fill: #fff;
+    stroke-width: 5;
+    stroke: #fff;
+    fill: #fff;
 }
 .sds{
-  stroke-width: 6;
-  stroke: #232323;
-  fill: #232323;
+    stroke-width: 6;
+    stroke: #232323;
+    fill: #232323;
 }
 #writing {
-  width: inherit;
-  height: inherit;
-  display: flex;
-  align-items: center;
-  align-content: center;
+    width: inherit;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    align-content: center;
 
 }
 @media screen and (min-width: 64em) {
-  #InnerGoddess{
-    width: 40vw;
-    height: auto;
-    display: flex;
-    align-items: center;
-    align-content: center;
-  }
-  #box{
-    width: 40vw;
-    height: auto;
-    display: flex;
-    align-items: center;
-    align-content: center;
-  }
-  #theAcadmey{
-    width: 40vw;
-    height: auto;
-    display: flex;
-    align-items: center;
-    align-content: center;
+    #InnerGoddess{
+        width: 40vw;
+        height: auto;
+        display: flex;
+        align-items: center;
+        align-content: center;
+    }
+    #box{
+        width: 40vw;
+        height: auto;
+        display: flex;
+        align-items: center;
+        align-content: center;
+    }
+    #theAcadmey{
+        width: 40vw;
+        height: auto;
+        display: flex;
+        align-items: center;
+        align-content: center;
 
-  }
+    }
 }
 #InnerGoddess{
-  position: absolute !important;
-  display: flex;
-  align-items: center;
-  align-content: center;
+    position: absolute !important;
+    display: flex;
+    align-items: center;
+    align-content: center;
 }
 #theAcadmey{
-  position: absolute !important;
-  z-index: -5;
-  color: white;
-  fill: #fff;
-  opacity: 0;
+    position: absolute !important;
+    z-index: -5;
+    color: white;
+    fill: #fff;
+    opacity: 0;
 }
 #box {
-  position: absolute;
+    position: absolute;
 }
 .st{
-  stroke-width: 2;
-  stroke: #fff;
-  fill: none;
-  opacity: 1;
-  stroke-dasharray: 300;
-  -webkit-transition: -webkit-transform .6s;
-  transition: transform .6s;
+    stroke-width: 2;
+    stroke: #fff;
+    fill: none;
+    opacity: 1;
+    stroke-dasharray: 300;
+    -webkit-transition: -webkit-transform .6s;
+    transition: transform .6s;
 }
 
 /*Section 2 */
 
 .section2row{
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  height: 100vh;
-  width:100vw;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 100vh;
+    width:100vw;
 }
 .anim{
-  display: flex;
-  align-content: center;
+    display: flex;
+    align-content: center;
 }
 
 /*Section 3 */
 
 .slide1{
-  height: 100vh;
+    height: 100vh;
 }
 .image{
-  height: 100vh;
+    height: 100vh;
 }
 
 /*Section 4 */
 
 #slide3{
-  padding-top: 5vh;
-  width: 90%;
-  height: 75vh;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: initial;
+    padding-top: 5vh;
+    width: 90%;
+    height: 75vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: initial;
 }
 
 /*Section 5 */
 
 #videorow{
-  height: 40vh;
-  margin-top: 20vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  float: none !important;
-  max-width: 100vh;
+    height: 40vh;
+    margin-top: 20vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    float: none !important;
+    max-width: 100vh;
 }
 
 /*Section 6 */
 
 #socialrow{
-  height: 40vh;
-  margin-top: 30vh;
-  width: 90%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    height: 40vh;
+    margin-top: 30vh;
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 .social .button{
-  background:transparent;
-  width: 7vw;
-  height: 7vw;
+    background:transparent;
+    width: 7vw;
+    height: 7vw;
 }
 .social .button:hover{
-  background: white;
-  -webkit-transition: background 1s;
-  -moz-transition: background 1s;
-  -o-transition: background 1s;
-  transition: background 1s;
+    background: white;
+    -webkit-transition: background 1s;
+    -moz-transition: background 1s;
+    -o-transition: background 1s;
+    transition: background 1s;
 }
 /*Section 7 */
 #contactrow{
-  height: 70vh;
+    height: 70vh;
 }
 #form
 {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  margin-top: 4vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 4vh;
 }
 #contact input{
-  width: 35vw;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  background: transparent;
-  border-width: 0 0 3px 0;
-  border-color: transparent transparent white transparent;
-  box-shadow: none;
-  color: white;
-  font-size: 25px;
-  margin-top:20px;
+    width: 35vw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: transparent;
+    border-width: 0 0 3px 0;
+    border-color: transparent transparent white transparent;
+    box-shadow: none;
+    color: white;
+    font-size: 25px;
+    margin-top:20px;
 }
 #contact textarea{
-  width: 35vw;
-  margin-top: 30px;
-  box-shadow: none;
-  border: none;
-  font-size: 25px;
-  color: lightgray;
+    width: 35vw;
+    margin-top: 30px;
+    box-shadow: none;
+    border: none;
+    font-size: 25px;
+    color: lightgray;
 }
 #contact input::-webkit-input-placeholder{
-  color: white;
-  font-family: "Josefin Slab", serif;
+    color: white;
+    font-family: "Josefin Slab", serif;
 }
 #contact input::-moz-placeholder{
-  color: white;
-  font-family: "Josefin Slab", serif;
+    color: white;
+    font-family: "Josefin Slab", serif;
 }
 #contact textarea::-webkit-input-placeholder{
-  color: lightgray;
-  font-family: "Josefin Slab", serif;
+    color: lightgray;
+    font-family: "Josefin Slab", serif;
 }
 #contact textarea::-moz-placeholder{
-  color: white;
-  font-family: "Josefin Slab", serif;
+    color: white;
+    font-family: "Josefin Slab", serif;
 
 }
 
 #foo .button{
-  background: transparent;
-  font-size: 20px;
-  color: white;
-  transition: border-color ease-in 1s;
-  font-family: "Josefin Slab", serif;
-  border-radius: 5px;
+    background: transparent;
+    font-size: 20px;
+    color: white;
+    transition: border-color ease-in 1s;
+    font-family: "Josefin Slab", serif;
+    border-radius: 5px;
 }
 #foo .buttons{
-  display: flex;
-  align-content: center;
-  justify-content: center;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 #foo .button:hover{
-  background: transparent;
-  border: white 2px;
-  transition: border-color ease-in 1s;
-  box-shadow: none;
+    background: transparent;
+    border: white 2px;
+    transition: border-color ease-in 1s;
+    box-shadow: none;
 
 }
 /* Common */
 
 .columns{
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  padding-bottom: 10px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-bottom: 10px;
 
 }
 
 .flowers{
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  height: 100vh;
-  width: 50vw;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 100vh;
+    width: 50vw;
 
 }
 .banner{
-  width: 45vw;
-  height: auto;
+    width: 45vw;
+    height: auto;
 }
 .reveal{
-  z-index: 999 !important;
+    z-index: 999 !important;
 }
 
 /* social buttons */
 
 .social svg {
-  position: absolute;
-  top: 0;
-  left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .social svg line {
-  stroke-width: 10;
-  stroke: #232323;
-  fill: none;
-  stroke-dasharray: 200;
-  -webkit-transition: all .6s;
-  transition: transform .6s;
+    stroke-width: 10;
+    stroke: #232323;
+    fill: none;
+    stroke-dasharray: 200;
+    -webkit-transition: all .6s;
+    transition: transform .6s;
 }
 .social:hover svg line.top {
-  -webkit-transform: translateX(-100px);
-  transform: translateX(-100px);
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
 }
 .social:hover svg line.bottom {
-  -webkit-transform: translateX(100px);
-  transform: translateX(100px);
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
 }
 .social:hover svg line.left {
-  -webkit-transform: translateY(100px);
-  transform: translateY(100px);
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
 }
 .social:hover svg line.right {
-  -webkit-transform: translateY(-100px);
-  transform: translateY(-100px);
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
 }
 .social a{
-  text-decoration: none;
-  color:white;
+    text-decoration: none;
+    color:white;
 }
 .social {
-  width: 7.32vw;
-  height: 7.32vw;
-  text-align: center;
-  position: relative;
-  background: transparent;
-  display: inline-block;
-  margin: 0 10px;
-  cursor: pointer;
-  color: white;
-  -webkit-transition: background 0.4s 0.5s;
-  transition: background 0.4s 0.5s;
-  text-decoration: none;
+    width: 7.32vw;
+    height: 7.32vw;
+    text-align: center;
+    position: relative;
+    background: transparent;
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+    color: white;
+    -webkit-transition: background 0.4s 0.5s;
+    transition: background 0.4s 0.5s;
+    text-decoration: none;
 
 }
 .social:hover {
-  background: rgba(255,255,255,0);
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
+    background: rgba(255,255,255,0);
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
 }
 .social i {
-  font-size: 3.66vw;
-  width: 100%;
-  margin-top:25%;
+    font-size: 3.66vw;
+    width: 100%;
+    margin-top:25%;
 }
 .social i{
-  -webkit-transition: color 0.4s 0.5s;
-  transition: color 0.4s 0.5s;
+    -webkit-transition: color 0.4s 0.5s;
+    transition: color 0.4s 0.5s;
 }
 .social:hover i{
-  color: white;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
+    color: white;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
 }
 .social svg {
-  position: absolute;
-  top: 0;
-  left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .social svg line {
-  stroke-width: 3;
-  stroke: white;
-  fill: none;
-  -webkit-transition: all .8s ease-in-out;
-  transition: all .8s ease-in-out;
+    stroke-width: 3;
+    stroke: white;
+    fill: none;
+    -webkit-transition: all .8s ease-in-out;
+    transition: all .8s ease-in-out;
 }
 .social:hover svg line {
-  -webkit-transition-delay: 0.1s;
-  transition-delay: 0.1s;
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
 }
 .social svg line.top,
 .social svg line.bottom {
-  stroke-dasharray: 100 100;
+    stroke-dasharray: 100 100;
 }
 .social svg line.left,
 .social svg line.right {
-  stroke-dasharray: 100 100;
+    stroke-dasharray: 100 100;
 }
 .social:hover svg line.top {
-  -webkit-transform: translateX(-200px);
-  transform: translateX(-200px);
+    -webkit-transform: translateX(-200px);
+    transform: translateX(-200px);
 }
 .social:hover svg line.bottom {
-  -webkit-transform: translateX(200px);
-  transform: translateX(200px);
+    -webkit-transform: translateX(200px);
+    transform: translateX(200px);
 }
 .social:hover svg line.left {
-  -webkit-transform: translateY(200px);
-  transform: translateY(200px);
+    -webkit-transform: translateY(200px);
+    transform: translateY(200px);
 }
 .social:hover svg line.right {
-  -webkit-transform: translateY(-200px);
-  transform: translateY(-200px);
+    -webkit-transform: translateY(-200px);
+    transform: translateY(-200px);
 }
 .social:hover h3, .social:hover span {
-  color: white;
+    color: white;
 }
 .social svg line {
-  stroke-width: 8;
+    stroke-width: 8;
 }
 .social:hover svg line {
-  stroke: white;
+    stroke: white;
 }
 .boxes{
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 /* Box Effects */
 .box {
-  text-align: center;
-  width: 22vw;
-  position: relative;
-  background: rgba(255,255,255,1);
-  display: inline-block;
-  cursor: pointer;
-  color: #2c3e50;
-  box-shadow: inset 0 0 0 3px #2c3e50;
-  -webkit-transition: background 0.4s 0.5s;
-  transition: background 0.4s 0.5s;
+    text-align: center;
+    width: 22vw;
+    position: relative;
+    background: rgba(255,255,255,1);
+    display: inline-block;
+    cursor: pointer;
+    color: #2c3e50;
+    box-shadow: inset 0 0 0 3px #2c3e50;
+    -webkit-transition: background 0.4s 0.5s;
+    transition: background 0.4s 0.5s;
 }
 .box:hover {
-  background: rgba(255,255,255,0);
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
+    background: rgba(255,255,255,0);
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
 }
 .box h3 {
-  font-family: "Josefin Slab", serif;
-  font-size: 13.17vw;
-  line-height: 27vw;
-  margin: 0;
-  font-weight: 400;
-  width: 100%;
+    font-family: "Josefin Slab", serif;
+    font-size: 13.17vw;
+    line-height: 27vw;
+    margin: 0;
+    font-weight: 400;
+    width: 100%;
 }
 .box span {
-  font-family: "Josefin Slab", serif;
-  display: block;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.07vw;
-  font-size: 1.46vw;
-  padding: 0.366vw;
+    font-family: "Josefin Slab", serif;
+    display: block;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.07vw;
+    font-size: 1.46vw;
+    padding: 0.366vw;
 }
 .box h3,
 .box span {
-  -webkit-transition: color 0.4s 0.5s;
-  transition: color 0.4s 0.5s;
+    -webkit-transition: color 0.4s 0.5s;
+    transition: color 0.4s 0.5s;
 }
 .box:hover h3,
 .box:hover span {
-  color: #fff;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
+    color: #fff;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
 }
 .box svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: auto;
-  display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: auto;
+    display: block;
 
 }
 .box svg line {
-  stroke-width: 5;
-  stroke: #ecf0f1;
-  fill: none;
-  -webkit-transition: all .8s ease-in-out;
-  transition: all .8s ease-in-out;
+    stroke-width: 5;
+    stroke: #ecf0f1;
+    fill: none;
+    -webkit-transition: all .8s ease-in-out;
+    transition: all .8s ease-in-out;
 }
 .box:hover svg line {
-  -webkit-transition-delay: 0.1s;
-  transition-delay: 0.1s;
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
 }
 .box svg line.top,
 .box svg line.bottom {
-  stroke-dasharray: 330 240;
+    stroke-dasharray: 330 240;
 }
 .box svg line.left,
 .box svg line.right {
-  stroke-dasharray: 490 400;
+    stroke-dasharray: 490 400;
 }
 .box:hover svg line.top {
-  -webkit-transform: translateX(-44vw);
-  transform: translateX(-44vw);
+    -webkit-transform: translateX(-44vw);
+    transform: translateX(-44vw);
 }
 .box:hover svg line.bottom {
-  -webkit-transform: translateX(44vw);
-  transform: translateX(44vw);
+    -webkit-transform: translateX(44vw);
+    transform: translateX(44vw);
 }
 .box:hover svg line.left {
-  -webkit-transform: translateY(67.3vw);
-  transform: translateY(67.3vw);
+    -webkit-transform: translateY(67.3vw);
+    transform: translateY(67.3vw);
 }
 .box:hover svg line.right {
-  -webkit-transform: translateY(-67.3vw);
-  transform: translateY(-67.3vw);
+    -webkit-transform: translateY(-67.3vw);
+    transform: translateY(-67.3vw);
 }
 .demo-3{
-  display: block;
-  margin: 0 auto;
+    display: block;
+    margin: 0 auto;
 }
 .demo-3 .box {
-  background: rgba(0,0,0,0);
-  color: #fff;
-  box-shadow: none;
-  -webkit-transition: background 0.3s;
-  transition: background 0.3s;
+    background: rgba(0,0,0,0);
+    color: #fff;
+    box-shadow: none;
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
 }
 .demo-3 .box:hover {
-  background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.4);
 }
 .demo-3 .box h3,
 .demo-3 .box span {
-  -webkit-transition: none;
-  transition: none;
+    -webkit-transition: none;
+    transition: none;
 }
 .demo-3 .box svg line {
-  -webkit-transition: all .5s;
-  transition: all .5s;
+    -webkit-transition: all .5s;
+    transition: all .5s;
 }
 .demo-3 .box:hover svg line {
-  stroke-width: 10;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
+    stroke-width: 10;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
 }
 .demo-3 .box:hover svg line.top {
-  -webkit-transform: translateX(-21.9vw);
-  transform: translateX(-21.9vw);
+    -webkit-transform: translateX(-21.9vw);
+    transform: translateX(-21.9vw);
 }
 .demo-3 .box:hover svg line.bottom {
-  -webkit-transform: translateX(21.9vw);
-  transform: translateX(21.9vw);
+    -webkit-transform: translateX(21.9vw);
+    transform: translateX(21.9vw);
 }
 .demo-3 .box:hover svg line.left {
-  -webkit-transform: translateY(33.67vw);
-  transform: translateY(33.67vw);
+    -webkit-transform: translateY(33.67vw);
+    transform: translateY(33.67vw);
 }
 .demo-3 .box:hover svg line.right {
-  -webkit-transform: translateY(-33.67vw);
-  transform: translateY(-33.67vw);
+    -webkit-transform: translateY(-33.67vw);
+    transform: translateY(-33.67vw);
 }
