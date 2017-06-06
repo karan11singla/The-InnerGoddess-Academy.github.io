@@ -8,115 +8,65 @@
     <meta name="description"
           content="Morphing Buttons Concept: Inspiration for revealing content by morphing the action element"/>
     <meta name="keywords" content="expanding button, morph, modal, fullscreen, transition, ui"/>
-    <link rel="stylesheet" href="css/foundation.min.css">
-    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Muli:400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/inspiration.css"/>
-    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css"/>
-    <link rel="stylesheet" href="css/vertical-timeline.css">
-
 
 </head>
 <body>
-<canvas id="canvas"></canvas>
 <div class="container">
-    <div id="fullpage">
-        <div class="section" id="1">
-            <div class="back">
-            <div class="heading"><h1 id="heading1">Inspiration</h1></div>
-            </div>
-        </div>
-        <div class="section">
-            <div class="center">
-                <div id="myTimeline">
-                    <div>
-                        <b>Yoga</b> : 28 May <a href="">Book Here</a>
-                    </div>
-                    <div>
-                        <b>Personal Branding</b> 18 June <a href="">Book Here</a>
-                    </div>
-                    <div>
-                        <b>Entrepreneurship </b>9 July <a href="">Book Here</a>
-                    </div>
-                    <div>
-                        <b>Public Speaking</b> 23 July <a href="">Book Here</a>
-                    </div>
-                    <div>
-                        <b>Creativity</b> 13 August <a href="">Book Here</a>
-                    </div>
-                    <div>
-                        <b>Movement Therapy</b> 27 August <a href="">Book Here</a>
-                    </div>
-                    <div>
-                        <b>Psychology</b> 22 September <a href="">Book Here</a>
-                    </div>
-                    <div>
-                        <b>Creative Writing</b> 12 November<a href="">Book Here</a>
-                    </div>
-                    <div>
-                        <b>Photography</b> 17 December <a href="">Book Here</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="section">
-            <div class="row example-orbit">
-                <div class="centereed">
-                    <div class="your-class">
-                        <div><img src="img/orbit.JPG"/> </div>
-                        <div><img src="img/orbit2.JPG"/></div>
-                        <div><img src="img/orbit3.JPG"/></div>
-                        <div><img src="img/orbit4.JPG"/> </div>
-                        <div><img src="img/orbit5.JPG"/></div>
-                        <div><img src="img/orbit6.JPG"/></div>
-                    </div>
-                </div>
-            </div>
+    <div class="row first">
+        <div class="writing">
+            <img id="first-img" src="svg/inpiration.svg">
         </div>
     </div>
-</div><!-- /container -->
+    <div class="header">
+        <h1 class="About">The Inner Goddess Academy</h1>
+    </div>
+    <div class="row" id="events">
+    </div>
+    <div class="header">
+        <h1 class="About">The Inner Goddess Academy</h1>
+    </div>
+    <div class="row" id="image-reel">
+        <div id="slider">
+            <figure>
+                <img src="img/main1.JPG" alt>
+                <img src="img/orbit.JPG" alt>
+                <img src="img/orbit2.JPG" alt>
+                <img src="img/orbit3.JPG" alt>
+                <img src="img/orbit4.JPG" alt>
 
+            </figure>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"
+        type="text/javascript"></script>
 
-<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="google-sheet.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.2/jquery.fullPage.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/js/foundation.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
-<script type="text/javascript" src="https://use.fontawesome.com/fcbf6c9e4f.js"></script>
-<script type="text/javascript" src="js/vertical-timeline.min.js"></script>
-<script type="text/javascript" src="js/slick.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('#fullpage').fullpage({
-            anchors: ['Home', 'About', 'test'],
-            slidesNavigation: false,
-            navigation: false,
-            loopHorizontal: false
-        });
-    });
+<script id="workshopTemplate" type="text/x-handlebars-template">
+    {{#each pets}}
+    <div class="workshop-box">
+            <div class="post-module">
+                <!-- Thumbnail-->
+                <div class="thumbnail">
+                    <div class="date">
+                        <div class="day">{{Date-Day}}</div>
+                        <div class="month">{{Date-Month}}</div>
+                    </div><img src="{{photo}}"/>
+                </div>
+                <!-- Post Content-->
+                <div class="post-content">
+                    <div class="category">Photos</div>
+                    <h1 class="title">{{name}}</h1>
+                    <h2 class="sub_title">{{Date-Year}}</h2>
+                </div>
+            </div>
+        </div>
+
+    {{/each}}
 </script>
-<script>
-    $(document).foundation();
-    $(document).ready(function(){
-        $('.your-class').slick({
-            accessibility:true,
-            adaptiveHeight:true,
-            autoplay:true,
-            centerMode:false,
-            dots: true,
-            infinite: true
-        });
-    });
-</script><!--Foundation-->
-<script>
-    $('#myTimeline').verticalTimeline({
-        startSide: 'left',
-        alternate: true
-    });
-
-</script>
-
 </body>
 </html>
+<script src=js/inspiration.js type="text/javascript"></script>

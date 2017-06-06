@@ -1,0 +1,221 @@
+.belt {
+    background: #fff;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative
+}
+
+.belt .belt__image {
+    background-size: cover;
+    background-position: center;
+    height: 300px
+}
+
+@media (min-width: 812px) {
+    .belt .belt__image {
+        height: 600px
+    }
+}
+
+.belt--draggable {
+    cursor: -webkit-grab;
+    cursor: grab;
+    background: #EDEDED;
+    position: relative
+}
+
+.belt--draggable .belt__draggable {
+    height: calc(100vh - 48px);
+    min-height: 400px;
+    overflow: hidden
+}
+
+@media (min-width: 812px) {
+    .belt--draggable .belt__draggable {
+        height: calc(100vh - 72px);
+        max-height: 750px
+    }
+}
+
+.belt--draggable .belt__draggable .belt__draggable__content {
+    height: 100%;
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    line-height: 0
+}
+
+.belt--draggable .belt__draggable .belt__draggable__content img {
+    height: 100%
+}
+
+.belt--draggable .belt__draggable .belt__draggable__content--index {
+    width: 10217px
+}
+
+@media (min-width: 812px) {
+    .belt--draggable .belt__draggable .belt__draggable__content--index {
+        width: 12375px
+    }
+}
+
+.belt--draggable .belt__draggable .belt__draggable__content--extended {
+    width: 4583px
+}
+
+@media (min-width: 812px) {
+    .belt--draggable .belt__draggable .belt__draggable__content--extended {
+        width: 5552px
+    }
+}
+
+.belt .belt__callout {
+    background: #536DFE;
+    color: #fff;
+    opacity: 1;
+    padding: 60px 30px;
+    transition: opacity 400ms ease-in-out;
+    z-index: 1
+}
+
+@media (min-width: 812px) {
+    .belt .belt__callout {
+        height: 400px;
+        margin-top: -30px;
+        padding: 45px;
+        position: absolute;
+        right: 120px;
+        width: 380px;
+        box-sizing: border-box;
+        bottom: -90px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around
+    }
+}
+
+.belt .belt__callout--top {
+    top: 60px;
+    bottom: auto
+}
+
+.belt .belt__callout--variable-height {
+    height: auto
+}
+
+.belt .belt__callout .belt__callout__image {
+    line-height: 0;
+    margin: 0 -30px
+}
+
+.belt .belt__callout .belt__callout__image img {
+    max-width: 100%
+}
+
+.belt .belt__callout .belt__callout__title {
+    font-family: "Product Sans", arial, sans-serif;
+    font-size: 28px;
+    line-height: 1.29;
+    margin-bottom: 30px
+}
+
+.belt .belt__callout .belt__callout__body {
+    flex-grow: 1
+}
+
+.belt .belt__callout .belt__callout__aside {
+    text-transform: uppercase;
+    margin-top: 30px
+}
+
+.belt .belt__callout .belt__callout__aside a {
+    color: inherit;
+    font-weight: 500
+}
+
+.belt .belt__callout .belt__callout__mobile {
+    display: block;
+    margin-top: 30px
+}
+
+@media (min-width: 812px) {
+    .belt .belt__callout .belt__callout__mobile {
+        display: none
+    }
+}
+
+.belt .belt__callout .belt__callout__mobile .belt__callout__mobile__title {
+    font-family: "Product Sans", arial, sans-serif;
+    font-size: 24px;
+    line-height: 30px
+}
+
+.belt .belt__callout .belt__callout__mobile .belt__callout__mobile__body {
+    margin-top: 30px;
+    margin-bottom: 30px
+}
+
+.belt--yellow .belt__callout {
+    background: #FFD500;
+    color: #000
+}
+
+.belt--teal .belt__callout {
+    background: #00E4FF;
+    color: #000
+}
+
+.belt--green .belt__callout {
+    background: #1CE8B5;
+    color: #000
+}
+
+.belt--dragging {
+    cursor: -webkit-grabbing;
+    cursor: grabbing
+}
+
+@media (min-width: 812px) {
+    .belt--dragging .belt__callout {
+        opacity: 0
+    }
+}
+
+@media (min-width: 812px) {
+    .belt--with-weather {
+        padding-bottom: 0;
+        padding-top: 60px
+    }
+}
+
+.belt--with-weather .belt__callout {
+    padding-bottom: 140px
+}
+
+@media (min-width: 812px) {
+    .belt--with-weather .belt__callout {
+        padding-bottom: inherit
+    }
+}
+
+.belt--with-weather .belt__callout__subpartial {
+    box-sizing: border-box;
+    height: 160px;
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    margin-top: 60px;
+    max-width: 400px
+}
+
+@media (min-width: 812px) {
+    .belt--with-weather .belt__callout__subpartial {
+        bottom: -105px;
+        left: 20px;
+        right: 20px
+    }
+}
+
+.belt__callout__cta {
+    margin-top: 20px
+}

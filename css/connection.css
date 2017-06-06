@@ -1,77 +1,288 @@
-:root {
-    --bg: #3C465C;
-    --primary: #fff;
-    --solid: #fff;
-    --btn-w: 10em;
-    --dot-w: calc(var(--btn-w)*.2);
-    --tr-X: calc(var(--btn-w) - var(--btn-w)*.2);
-}
-* {box-sizing: border-box;}
-*:before, *:after {box-sizing: border-box;}
-
-@font-face{
-    font-family: 'bromelle';
-    src: url('../fonts/bromello/bromello.eot');
-    src: url('../fonts/bromello/bromello.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/bromello/bromello.woff') format('woff'),
-    url('../fonts/bromello/bromello.ttf') format('truetype'),
-    url('../fonts/bromello/bromello.svg#bromello') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-canvas {
-    position: absolute;
-    z-index: -1;
-}
-body{
-    width: 100%;
-    height:100%;
-    background-image:url('../img/connectionbk.jpg');
-    background-size:100vw 100vh ;
-}
-.heading h1{
-    font-family: 'bromelle';
-    font-size: 8vw;
-    color: #06273f;
+body {
+    margin: 0;
+    padding: 0;
+    color: black;
+    background-color: #fff;
 }
 
-.center{
+.container {
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row {
+    max-width: 100%;
+    width: 100vw;
+    margin: 0 0 20px 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    width: 100vw;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.first {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    display: -webkit-flex;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
-.box{
-    width: 40vw;
-    height: 21vw;
+@media(max-width:1024px){
+    .first{
+        justify-content:center;
+        flex-direction: column;
+        height: auto;
+    }
+    .writing{
+        width: 100vw;
+        height: 80vh;
+    }
+    .para1{
+        width: 100vw;
+        height: auto;
+}
+}
+.writing {
+    flex: 1;
+    width: 50vw;
+    height: 80vh;
+    margin: 20px;
+    padding: 30px 0px 30px 0 ;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+
+    color:#000;
+}
+#first-img{
+    width: 75vw;
+    height: auto;
+}
+
+.para1 {
+    width: 50vw;
+    height: 80vh;
+    flex: 1;
     background-color: white;
+    margin: 20px;
+    padding: 30px;
     display: flex;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.24), 0 0 4px 0 rgba(0,0,0,0.14);
+    transition: 0.3s;
+}
+.para1:hover,.para2:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 0 8px rgba(0,0,0,0.14);
+}
+.para1 h1,.para2 h1, .para3 h1{
+    text-align: center;
+    font-family: 'Muli', serif;
+    font-size: 2vw;
+    font-weight: 400;
+}
+.para1 p{
+    max-width: 45vw;
+    text-align: justify;
+    font-size: 1.7vw;
+}
+.buttons{
+    width: 100%;
+    display: flex;
     justify-content: center;
 }
-.section1{
-    background: #06273f;
-    background: -webkit-radial-gradient(#5380a1,#06273f); /* Safari 5.1 to 6.0 */
-    background: -o-radial-gradient(#5380a1,#06273f); /* For Opera 11.6 to 12.0 */
-    background: -moz-radial-gradient(#5380a1,#06273f); /* For Firefox 3.6 to 15 */
-    background: radial-gradient(#5380a1,#06273f); /* Standard syntax */
+@media(max-width:1024px){
+    .para1{
+        margin: 0;
+        padding: 0;
+        width: 95vw;
+        height: auto;
+    }
+    .para1 h1{
+        font-size: 7vw;
+    }
+    .para1 p{
+        font-size: 5vw;
+        max-width: 90%;
+        font-weight: 300;
+    }
+    .svg-wrapper .shape{
+        display: none;
+    }
 }
-.white{
-    font-size: 0.995vw;
-    color: #fff;
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
-.white h1{
-    text-align: center;
-    font-size: 2vw;
+
+.para3{
+    flex: 1;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
-.bttn-lg{
-    width: 34vw;
-    height: 25vh;
-    font-family: bromelle !important;
-    font-size: 7vw !important;
-    background-color: #06273f !important;
-    border-radius: 10%;
+.para2 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    margin: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.24), 0 0 4px 0 rgba(0,0,0,0.14);
+    transition: 0.3s;
+
 }
-.bttn-lg:hover{
-    color: #06273f !important;
-    background-color: white !important;
+
+.para2 h1{
+    margin: 0;
+}
+.para2 p, .para3 p{
+    text-align: justify;
+    font-size: 1.4vw;
+    font-family: 'Lato', serif;
+
+}
+.para2 h3{
+    font-size: 1.6vw;
+    font-family: 'Lato',serif;
+}
+.card{
+    width: 100%;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.24), 0 0 4px 0 rgba(0,0,0,0.14);
+    margin-bottom: 20px;
+    margin-left: 20px;
+    padding: 20px 0 20px 20px;
+}
+.card:nth-child(3){
+    background: -webkit-linear-gradient(left, #cb2d3e, #ef473a); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #cb2d3e, #ef473a); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #cb2d3e, #ef473a); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #cb2d3e, #ef473a); /* Standard syntax */
+    color: white;
+}
+.card:nth-child(2){
+    background: -webkit-linear-gradient(left, #CB356B , #BD3F32); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #CB356B, #BD3F32); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #CB356B, #BD3F32); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #CB356B , #BD3F32); /* Standard syntax */
+
+    color: white;
+}
+.card:nth-child(4){
+    background: -webkit-linear-gradient(left, #CB356B , #BD3F32); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #CB356B, #BD3F32); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #CB356B, #BD3F32); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #CB356B , #BD3F32); /* Standard syntax */
+
+    color: white;
+}
+@media(max-width:1024px){
+    .about{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .para3{
+        max-width: 80vw;
+        margin: 0 0 0 0;
+        padding: 0;
+    }
+    .para3 h1{
+        font-size: 7vw;
+    }
+    .para3 h2{
+        font-size: 4.8vw;
+    }
+    .card{
+        margin: 20px 0 20px 0;
+    }
+    .card p{
+        font-size: 3vw;
+
+    }
+    .para2{
+        margin:20px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .para2 h1{
+        margin: 0;
+        font-size: 7vw;
+    }
+    .para2 h3{
+        font-size: 4vw;
+    }
+    .para2 p{
+        font-size: 3vw;
+    }
+    .para2 ul{
+
+    margin: 0 auto !important;
+    padding: 20px !important;
+
+    }
+}
+
+.svg-wrapper {
+  width: 320px;
+}
+.shape {
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 8px;
+  fill: transparent;
+  stroke: #000;
+  border-bottom: 5px solid black;
+  transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+}
+.text {
+  font-family: 'Roboto Condensed';
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: 8px;
+  color: #000;
+  top: -48px;
+  position: relative;
+  text-align: center;
+}
+.svg-wrapper:hover .shape {
+  stroke-width: 2px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 760;
+}
+#card{
+    height: 400px;
+    padding: 45px;
+    width: 380px;
+    left: 20px;
+    position: absolute;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 99999;
+    bottom:1000px;
+    background: BLUE;
 }

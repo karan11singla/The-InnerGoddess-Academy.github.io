@@ -54,8 +54,8 @@ body::-webkit-scrollbar-thumb {
 
 }
 .header{
-  font-family: 'Cinzel', serif;
-  font-weight: 100 !important;
+  font-family: 'Muli', serif;
+  font-weight: 400 !important;
   font-size: 2vw;
   color: #fff;
   background: #252525;
@@ -121,7 +121,7 @@ li a {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 2.4vw;
-    font-family: 'Cinzel', serif;
+    font-family: 'Muli', serif;
 
 }
 li a:hover:not(.active) {
@@ -152,7 +152,7 @@ li a:hover:not(.active) {
     height: auto;
 }
 .column h1{
-    font-family: 'Cinzel', serif;
+    font-family: 'Muli', serif;
 }
 #About,#Products{
     height: 100vh;
@@ -207,20 +207,33 @@ button:focus{
 #social img{
     width: 10vw;
 }
+.buttonsform{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:20px;
+}
 .buttons{
     display: flex;
     justify-content: center;
-}
-.buttons button{
-
-    margin-top: 5vh;
-    background: black;
-    color: white;
+    margin: 0;
+    background: white;
+    color: black;
     border-radius: 0;
     border-color: black;
-    font-size: 1.5em;
+    font-size: 3vw !important;
     font-family: "Lora", serif;
+    padding: 5px 15px 5px 15px;
+    transition: 0.3s linear;
+}
+.buttons:hover{
+    background-color: black;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 0 8px rgba(0,0,0,0.14);
+    color: white;
 
+}
+ a{
+    text-decoration: none;
 }
 #social{
     height: 40vh;
@@ -229,7 +242,7 @@ button:focus{
     stroke: #000000 !important;
 }
 .box h3 {
-    font-family: 'Cinzel', sans-serif;
+    font-family: 'Muli', sans-serif;
     text-align: center;
 }
 
