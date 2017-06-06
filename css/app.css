@@ -385,6 +385,10 @@ button:focus{
     #foo input{
       width: 50vw;
     }
+    .buttons{
+        font-size: 5vw !important;
+        margin-bottom: 10px;
+    }
 }
 @media(min-width: 1024px){
     .column{
