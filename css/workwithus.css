@@ -1,4 +1,17 @@
+
 @import "https://fonts.googleapis.com/css?family=Raleway:400,300,200,500,600,700";
+body::-webkit-scrollbar {
+    width: 0.9vw;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #252525;
+}
 .fa-spin-fast {
   -webkit-animation: fa-spin-fast 0.2s infinite linear;
   animation: fa-spin-fast 0.2s infinite linear;
@@ -1251,6 +1264,7 @@ h3 {
 .page-header h1{
     text-align: center;
     font-size: 10vw !important;
+    font-family: 'Lato',sans-serif;
 }
 @media(max-width:1024px){
     .page-header h1{
