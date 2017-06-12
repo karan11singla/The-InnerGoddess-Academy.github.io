@@ -60,7 +60,13 @@
                 <div class="post-content">
                     <div class="category">Photos</div>
                     <h1 class="title">{{name}}</h1>
-                    <h2 class="sub_title">{{Date-Year}}</h2>
+                    <h2 class="sub_title">
+                        {{#if link}}
+                            <a class="handlebars_link" target="_blank" href="{{link}}">Book Here</a>
+                        {{else}}
+                            Coming Soon
+                        {{/if}}
+                    </h2>
                 </div>
             </div>
         </div>
