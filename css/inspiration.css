@@ -52,6 +52,7 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
     justify-content: center;
     position: relative;
+    margin-bottom: 0 !important
 }
 
 .writing {
@@ -120,7 +121,10 @@ body::-webkit-scrollbar-thumb {
     width: 50%;
     height: auto;
 }
-
+.handlebars_link{
+    text-decoration: none;
+    color: white;
+}
 .info-column {
     flex: 1;
     display: flex;
