@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 598.9 597" style="enable-background:new 0 0 598.9 597;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:url(#SVGID_1_);stroke-width:16;stroke-miterlimit:10;}
+	.st1{fill:url(#LinkedIn_1_);}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="2" y1="298.2" x2="597" y2="298.2" gradientTransform="matrix(1 0 0 -1 0 598)">
+	<stop  offset="0" style="stop-color:#642B73"/>
+	<stop  offset="1" style="stop-color:#C6426E"/>
+</linearGradient>
+<rect x="10" y="10.3" class="st0" width="579" height="579"/>
+<linearGradient id="LinkedIn_1_" gradientUnits="userSpaceOnUse" x1="84.3915" y1="298.5" x2="514.5085" y2="298.5">
+	<stop  offset="0" style="stop-color:#642B73"/>
+	<stop  offset="1" style="stop-color:#C6426E"/>
+</linearGradient>
+<path id="LinkedIn" class="st1" d="M514.5,345v159h-92.2V355.6c0-37.3-13.3-62.7-46.7-62.7c-25.5,0-40.6,17.1-47.3,33.7
+	c-2.4,5.9-3.1,14.2-3.1,22.5V504H233c0,0,1.2-251.3,0-277.3h92.2V266c-0.2,0.3-0.4,0.6-0.6,0.9h0.6V266
+	c12.3-18.9,34.1-45.8,83.1-45.8C469,220.2,514.5,259.8,514.5,345z M136.6,93c-31.5,0-52.2,20.7-52.2,47.9c0,26.6,20,47.9,51,47.9
+	h0.6c32.2,0,52.2-21.3,52.2-47.9C187.5,113.7,168.1,93,136.6,93z M89.9,504h92.2V226.7H89.9V504z"/>
+</svg>
