@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Muli');
+body{
+    font-family: "Muli",sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    overflow: hidden;
+    color: #1C3041;
+}
+.container{
+    display: flex;
+    align-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+#gforms{
+    align-self: center;
+    width:40vw;
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: column;
+}
+#names{
+    flex: 2;
+    justify-content: center;
+}
+#names input{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    display: block;
+    width: 80%;
+    padding: 7px;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    background: transparent;
+    margin-bottom: 50px;
+    font: 16px "Lato", Helvetica, sans-serif;
+    height: 45px;
+}
+.forms{
+    display:none;
+
+}
+.is-showing{
+    display: flex;
+    flex: 5;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 50px 30px -30px rgba(0, 0, 0, 0.3);
+
+}
+.progress-bar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid grey;
+    flex: 1;
+    background-color: white;
+}
+.button-row{
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: space-between;
+    width: 60%;
+}
+#front-page{
+    text-align: center;
+    justify-content: space-between;
+
+}
+label{
+    flex: 1;
+}
+
+#intruction-row{
+    width: 90%;
+    height:50%;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+    justify-content: center;
+}
+.inputs{
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    padding-right: 10px;
+    transform: translateX(-30px);
+}
+.labels{
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: left;
+    padding-left: 10px;
+    transform: translateX(-25px);
+
+}
+span{
+    flex: 1;
+}
+#intruction-row > input{
+    padding-bottom:20px;
+}
+.help-row{
+    font-size: 15px;
+    padding-bottom: 20px;
+}
+.mychart{
+    position: relative;
+    margin: auto;
+    height: 80%;
+    width: 80%;
+}
+.form-row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+button{
+    background-color: transparent;
+    font-size: 20px;
+    border: #1C3041 2px solid;
+    padding: 10px;
+    color: #1C3041;
+    margin-bottom: 20px;
+}
+button:hover{
+    background-color: #18F2B2;
+    color: #1C3041;
+    border: #18F2B2 2px solid;
+    -webkit-transition: background-color 0.2s linear,color 0.2s linear,border 0.2s linear;
+    -o-transition: background-color 0.2s linear,color 0.2s linear,border 0.2s linear;
+    -moz-transition: background-color 0.2s linear,color 0.2s linear,border 0.2s linear;
+    transition: background-color 0.2s linear,color 0.2s linear,border 0.2s linear;
+    }
+/* Progress */
+
+.progress {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.circle{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #1C3041;
+}
+.done{
+    background-color: #B2ABF2;
+}
+.active{
+    background-color: #18F2B2;
+}
+/* Radio Styles */
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"] + label {
+    color: #292321;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    align-self: stretch;
+}
+
+input[type="radio"] + label span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    vertical-align: middle;
+    cursor: pointer;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border:7px solid #1C3041;
+}
+
+input[type="radio"] + label span {
+    background-color: #1C3041;
+}
+
+input[type="radio"]:checked + label span {
+    background-color: #18F2B2;
+}
+
+input[type="radio"] + label span,
+input[type="radio"]:checked + label span {
+    -webkit-transition: background-color 0.2s linear;
+    -o-transition: background-color 0.2s linear;
+    -moz-transition: background-color 0.2s linear;
+    transition: background-color 0.2s linear;
+}
+/*Animations */
+
+.animate-out {
+    -webkit-animation: out 600ms linear forwards;
+    animation: out 600ms linear forwards;
+}
+
+.animate-in {
+    -webkit-animation: in 600ms linear forwards;
+    animation: in 600ms linear forwards;
+}
+.animate-in-reverse{
+    -webkit-animation: in 600ms linear reverse;
+    animation: in 600ms linear reverse;
+}
+.animate-out-reverse{
+    -webkit-animation: out 600ms linear reverse;
+    animation: out 600ms linear reverse;
+}
+@-webkit-keyframes out {
+    0% {
+        -webkit-transform: translateX(0px) ;
+        transform: translateX(0px);
+    }
+    100% {
+        -webkit-transform: translateX(-100vw);
+        transform: translateX(-100vw) ;
+    }
+}
+
+@keyframes out {
+    0% {
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+    100% {
+        -webkit-transform: translateX(-100vw);
+        transform: translateX(-100vw) ;
+    }
+}
+@-webkit-keyframes in {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(100vw);
+        transform: translateX(100vw);
+    }
+    50%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        --webkit-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+}
+@keyframes in {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(100vw);
+        transform: translateX(100vw);
+    }
+    50%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        --webkit-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+}
+
+@media (max-width:1024px) {
+    #gforms{
+        width: 100vw;
+        height: 100vh;
+        font-size: 50px;
+    }
+    h1{
+        font-size: 80px;
+    }
+    .inputs{
+        transform: translateX(-90px);
+    }
+    .labels{
+        transform: translateX(-90px);
+        line-height:25px;
+    }
+    .forms{
+        width: 100vw;
+        height:100vh;
+    }
+    .is-showing{
+        width: 100vw;
+        height: 100vh;
+    }
+    button{
+        font-size: 60px;
+    }
+    .animate-out {
+        -webkit-animation: out 600ms linear forwards;
+        animation: out 600ms linear forwards;
+    }
+
+    .animate-in {
+        -webkit-animation: in 600ms linear forwards;
+        animation: in 600ms linear forwards;
+    }
+    .animate-in-reverse{
+        -webkit-animation: in 600ms linear reverse;
+        animation: in 600ms linear reverse;
+    }
+    .animate-out-reverse{
+        -webkit-animation: out 600ms linear reverse;
+        animation: out 600ms linear reverse;
+    }
+    @-webkit-keyframes out {
+        0% {
+            -webkit-transform: translateX(0px) ;
+            transform: translateX(0px);
+        }
+        100% {
+            -webkit-transform: translateX(-100vw);
+            transform: translateX(-100vw) ;
+        }
+    }
+
+    @keyframes out {
+        0% {
+            -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+        }
+        100% {
+            -webkit-transform: translateX(-100vw);
+            transform: translateX(-100vw) ;
+        }
+    }
+    @-webkit-keyframes in {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateX(100vw);
+            transform: translateX(100vw);
+        }
+        50%{
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+            --webkit-transform: translateX(0px);
+            transform: translateX(0px);
+        }
+    }
+    @keyframes in {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateX(100vw);
+            transform: translateX(100vw);
+        }
+        50%{
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+            --webkit-transform: translateX(0px);
+            transform: translateX(0px);
+        }
+    }
+}
