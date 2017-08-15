@@ -13,7 +13,14 @@ var e = [],
     name =0,
     email = 0,
     count;
-var data = {e:0,a:0,c:0,n:0,p:0,name:0,email:0};
+var data = {e:0,a:0,c:0,n:0,o:0,name:0,email:0,O:"",C:"",E:"",A:"",N:""};
+function setMessage(e,a,c,n,o){
+    data.O = (o>=4) ? "Ideation" : (o>=2.6 && o<4) ? "Individualization" : "Strategic";
+    data.A = (a>=4) ? "Empathy" : (a>=2.6 && a<4) ? "Connectedness" : "Competitive";
+    data.C = (c>=4) ? "Focus" : (c>=2.6 && c<4) ? "Consistency" : "Adaptability";
+    data.N = (n>=4) ? "Intuitive" : (n>=2.6 && n<4) ? "Deliberative" : "Self-Assured";
+    data.E = (e>=4) ? "Significance" : (e>=2.6 && e<4) ? "Communicative" : "Analytical";
+}
 function processPhase(pag){
     var current=pag,next=pag+1;
     if (current === 0){
@@ -100,9 +107,10 @@ function processPhase(pag){
             data.a = scale(a_total);
             data.c = scale(c_total);
             data.n = scale(n_total);
-            data.p = scale(o_total);
+            data.o = scale(o_total);
             data.name = name;
             data.email = email;
+            setMessage(data.e,data.a,data.c,data.n,data.o);
             charted(scale(e_total),scale(a_total),scale(c_total),scale(n_total),scale(o_total));
         }
     }
