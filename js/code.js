@@ -15,7 +15,7 @@ var e = [],
     count;
 var data = {e:0,a:0,c:0,n:0,o:0,name:0,email:0,O:"",C:"",E:"",A:"",N:""};
 function setMessage(e,a,c,n,o){
-    data.O = (o>=4) ? "Ideation" : (o>=2.6 && o<4) ? "Individualization" : "Strategic";
+    data.O = (o>=4) ? "Ideation" : (o>=2.6 && o<4) ? "Strategic" : "Individualization";
     data.A = (a>=4) ? "Empathy" : (a>=2.6 && a<4) ? "Connectedness" : "Competitive";
     data.C = (c>=4) ? "Focus" : (c>=2.6 && c<4) ? "Consistency" : "Adaptability";
     data.N = (n>=4) ? "Intuitive" : (n>=2.6 && n<4) ? "Deliberative" : "Self-Assured";
