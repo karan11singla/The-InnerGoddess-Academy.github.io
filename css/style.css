@@ -110,6 +110,14 @@ label{
     transform: translateX(-25px);
 
 }
+.labels1{
+    width: inherit;
+    display: flex;;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+
+}
 span{
     flex: 1;
 }
@@ -217,8 +225,8 @@ input[type="radio"]:checked + label span {
 }
 
 .animate-in {
-    -webkit-animation: in 600ms linear forwards;
-    animation: in 600ms linear forwards;
+    -webkit-animation: in 600ms linear reverse;
+    animation: in 600ms linear;
 }
 .animate-in-reverse{
     -webkit-animation: in 600ms linear reverse;
@@ -260,32 +268,38 @@ input[type="radio"]:checked + label span {
     }
     100% {
         opacity: 1;
-        --webkit-transform: translateX(0px);
+        -webkit-transform: translateX(0px);
         transform: translateX(0px);
     }
 }
 @keyframes in {
     0% {
         opacity: 0;
-        -webkit-transform: translateX(100vw);
-        transform: translateX(100vw);
+        -webkit-transform: translate(100%);
+        transform: translate(100%);
     }
     50%{
         opacity: 0;
     }
     100% {
         opacity: 1;
-        --webkit-transform: translateX(0px);
+        -webkit-transform: translateX(0px);
         transform: translateX(0px);
     }
 }
 
 @media (max-width:1024px) {
+    body{
+        max-width: 100vw;
+        width: 100vw;
+        height: 100vh;
+    }
     #gforms{
         width: 100vw;
         height: 100vh;
         font-size: 50px;
     }
+
     h1{
         font-size: 80px;
     }
@@ -307,72 +321,20 @@ input[type="radio"]:checked + label span {
     button{
         font-size: 60px;
     }
-    .animate-out {
-        -webkit-animation: out 600ms linear forwards;
-        animation: out 600ms linear forwards;
+    input[type="radio"] + label span {
+        width: 40px;
+        height: 40px;
+    }
+    label{
+        text-align: center;
+    }
+    #names{
+        flex: none;
+    }
+    #names input{
+        padding: none;
+        font-size:56px;
+        height: initial;
     }
 
-    .animate-in {
-        -webkit-animation: in 600ms linear forwards;
-        animation: in 600ms linear forwards;
-    }
-    .animate-in-reverse{
-        -webkit-animation: in 600ms linear reverse;
-        animation: in 600ms linear reverse;
-    }
-    .animate-out-reverse{
-        -webkit-animation: out 600ms linear reverse;
-        animation: out 600ms linear reverse;
-    }
-    @-webkit-keyframes out {
-        0% {
-            -webkit-transform: translateX(0px) ;
-            transform: translateX(0px);
-        }
-        100% {
-            -webkit-transform: translateX(-100vw);
-            transform: translateX(-100vw) ;
-        }
-    }
-
-    @keyframes out {
-        0% {
-            -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-        }
-        100% {
-            -webkit-transform: translateX(-100vw);
-            transform: translateX(-100vw) ;
-        }
-    }
-    @-webkit-keyframes in {
-        0% {
-            opacity: 0;
-            -webkit-transform: translateX(100vw);
-            transform: translateX(100vw);
-        }
-        50%{
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-            --webkit-transform: translateX(0px);
-            transform: translateX(0px);
-        }
-    }
-    @keyframes in {
-        0% {
-            opacity: 0;
-            -webkit-transform: translateX(100vw);
-            transform: translateX(100vw);
-        }
-        50%{
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-            --webkit-transform: translateX(0px);
-            transform: translateX(0px);
-        }
-    }
 }

@@ -27,7 +27,7 @@ function processPhase(pag){
         $("#phase0").addClass('animate-out');
         setTimeout(function(){
             $("#phase0").removeClass().addClass('forms');
-            $("#phase1").removeClass().addClass('is-showing').addClass('animate-in');
+            $("#phase1").removeClass().addClass('animate-in').addClass('is-showing');
         },600);
         setTimeout(function(){
             $('#phase1').removeClass('animate-in');
@@ -38,7 +38,7 @@ function processPhase(pag){
         $("#phase"+current).addClass('animate-out');
         setTimeout(function(){
             $("#phase" + current).removeClass().addClass('forms');
-            $("#phase" + next).removeClass().addClass('is-showing').addClass('animate-in');
+            $("#phase" + next).removeClass().addClass('animate-in').addClass('is-showing');
             $("#class" + current).removeClass('active').addClass('done');
             $('#class' + next).addClass('active');
         },600);
@@ -112,6 +112,16 @@ function processPhase(pag){
             data.email = email;
             setMessage(data.e,data.a,data.c,data.n,data.o);
             charted(scale(e_total),scale(a_total),scale(c_total),scale(n_total),scale(o_total));
+            $.ajax({
+                type: "POST",
+                url: "https://script.google.com/macros/s/AKfycby371Y8kTlQ-OQTAcFcnLIbHhg6uJr3WK4ihUdvleNl4mM8pPY/exec",
+                dataType: "JSON",
+                data: JSON.stringify(data),
+                success: function(){
+                    alert("Thank you for your submission.Your results should be sent to your mail.");
+
+                }
+            });
         }
     }
 }
@@ -130,62 +140,85 @@ function backprocessPhase(pag) {
 }
 
 
-
+function steppedsize(vars){
+    if(vars<3 ){
+        return 2.6;
+    }
+    else{
+        return 4;
+    }
+}
 function charted(e, a, c, n, o) {
     var c1=c,a1=a,e1=e,n1=n,o1=o;
 
     var ctx = document.getElementById("myChart").getContext('2d');
     var myRadarChart = new Chart(ctx, {
-        type: 'radar',
+        type: 'bar',
         data: {
             labels: ['Openness','Conscientiousness','Extraversion', 'Agreeableness',  'Natural Reaction', ],
-            "datasets":[ {
-                "data": [parseFloat(o1),parseFloat(c1),parseFloat(e1),parseFloat(a1),parseFloat(n1)],
-                "fill": true,
-                "backgroundColor": "rgba(24, 242, 178,0.2)",
-                "borderColor": "rgb(24, 242, 178)",
-                "pointBackgroundColor": "#18F2B2",
-                "pointBorderColor": "#fff",
-                "pointHoverBackgroundColor": "#fff",
-                "pointHoverBorderColor": "#18F2B2"
-            }]
-        },
+            "datasets":[{
+                data: [parseFloat(o1),parseFloat(c1),parseFloat(e1),parseFloat(a1),parseFloat(n1)],
+                backgroundColor:[
+                    "rgba(255, 99, 132, 0.2)",
+                    "rgba(255, 159, 64, 0.2)",
+                    "rgba(75, 192, 192, 0.2)",
+                    "rgba(54, 162, 235, 0.2)",
+                    "rgba(201, 203, 207, 0.2)"
+                ],
+                borderColor: [
+                    "rgb(255, 99, 132)",
+                    "rgb(255, 159, 64)",
+                    "rgb(75, 192, 192)",
+                    "rgb(54, 162, 235)",
+                    "rgb(201, 203, 207)"
+                ],
+                borderWidth:1
+                }]
+            },
         options: {
             maintainAspectRatio: false,
-            scale: {
-                ticks: {
-                    max: 5,
-                    min:1,
-                    stepSize: 1.67
-                },
-                pointLabels :{
-                    fontStyle: "bold",
-                    fontColor:'#292321',
-                    fontFamily:"'Muli,'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
-                }
-            },
-            tooltips: {
+            scales: {
+                xAxes:[{
+                    ticks:{
+                        fontSize:20
+                    }
+                }],
+                yAxes:[{
+                    ticks: {
+                        min:0,
+                        max:5,
+                        fontSize: 30,
+                        stepSize: 0.2,
+                        callback: function(label, index, labels){
+                            switch (label) {
+                                case 0:
+                                    return 'Low';
+                                case 2.6:
+                                    return 'Mid';
+                                case 2.7:
+                                    return 'test';
+                                case 4:
+                                    return 'High';
+                                case 5:
+                                    return ' ';
+                            }
+                        },
+                    },
+                    scaleLabel: {
+                        display: true,
+                    }
+            }],
+        },
+        tooltips: {
                 mode: 'index'
             },
             legend: {
                     display:false
             }
-        }
-    });
+    },
+});
 }
 function scale(value){
     var scaled_value = parseFloat(value-(-20))/parseFloat(40);
     return 1+(scaled_value * 4)
 }
-$("#gforms").submit(function(o) {
-        $.ajax({
-            type: "POST",
-            url: "https://script.google.com/macros/s/AKfycby371Y8kTlQ-OQTAcFcnLIbHhg6uJr3WK4ihUdvleNl4mM8pPY/exec",
-            dataType: "JSON",
-            data: JSON.stringify(data),
-            success: function(o) {
-                alert("Thank you for your submission.Your strength themes should be sent to your mail.");
-
-            }
-        }), o.preventDefault()
-    })
